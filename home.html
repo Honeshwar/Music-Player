@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Home </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://kit.fontawesome.com/f595980e36.js" crossorigin="anonymous"></script>
+  </head>
+<body>
+    <nav>
+        <ul class="nav-bar-items" >
+          <div class="brand-logo-name-fav">
+                <li class="remove-list-style container " >
+                        <a href="home.html">
+                            <img class="logo" src="https://th.bing.com/th/id/OIP.kU9wCMV9W7Po-OVpT3wfFwHaHA?w=197&h=187&c=7&r=0&o=5&pid=1.7"alt="logo">
+                        </a>
+                </li>
+
+                <li class="remove-list-style brand-name container">
+                    <a  href="home.html">
+                            <h1>Chill</h1>
+                            <h1>Studio</h1>
+                    </a>
+                </li>
+
+                
+
+                <li class="remove-list-style container fav">
+                        <a href=""> Favorites</a>
+                </li>
+
+          </div>
+
+         <!-- hamburger button -->
+         <li class="remove-list-style "> 
+            <a href="#dropdown-list">
+                 <i  class="fa-sharp fa-solid fa-bars hamburger"></i>
+            </a>
+
+          </li>
+        </ul>
+
+      
+           <!-- hamburger button target container , dropdown list -->
+
+        <div id="dropdown-list"class="dropdown-list">
+            <ul  class="dropdown-menu">
+    
+                <li class="dropdown-item">
+                    <a href="#signup-form"><div id="profile" class="profile"><i class="fa-regular fa-user"></i>
+                        <p>Profile</p></div> </a>
+                </li>
+    
+                <li class="dropdown-item">
+                    <input  class="search" type="search" placeholder="Search"> 
+                   <i  class="fa-solid fa-magnifying-glass search-icon"></i> 
+                   
+                </li>
+                <li class="dropdown-item"> 
+                    <a href=""><i class="fa-regular fa-messages"></i></a>
+                </li>
+               
+                <li class="dropdown-item"> <a class="exit" href="#hamburger"> Close</a></li>
+            </ul>
+      </div>
+
+
+      <form id="signup-form">
+        <div class="sign-up">
+       <input id="inp1" class="sign-up-items" type="email"  class="email" placeholder="Email">
+       <input id="inp2" class="sign-up-items" type="password" class="password" placeholder="Password">
+       <input id="inp3" class="sign-up-items" type="button" role="button" value="Sign Up">
+       <a     id="close-window" href="home.html">close</a>
+       </div>
+      </form>
+    </nav>
+
+
+    <main>
+
+        <header class="header-image-animation-container">
+         <div class="frame">
+                <div class="cube">
+                    <div class="face one"> <a href="#player"><img src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img5.png"alt="dua Lipa" ></a> </div>
+                    
+                    <div class="face two"> <a href="#player"><img src="https://th.bing.com/th/id/OIP.hiTieF-elHogfwir9lwrCAHaHa?w=180&h=180&c=7&r=0&o=5&pid=1.7"alt="John Legend" ></a> </div>
+                    <div  class="face three"><a href="#player"><img src="https://th.bing.com/th/id/OIP.fGz7K4_lPlwxlR6NB2l8EgHaEK?w=318&h=180&c=7&r=0&o=5&pid=1.7"alt="top song" ></a>   </div>
+                    <div  class="face four"><a href="#player"><img src="https://th.bing.com/th/id/OIP.-5Yy3PmuLahAaAqoFKzNzgHaKm?w=115&h=180&c=7&r=0&o=5&pid=1.7" alt="Zyan Malik" ></a> </div>
+                    <div class="face five"><a href="#player"><img src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img5.png"alt="dua Lipa" ></a>  </div>
+                    <div class="face six"><a href="#player"><img src="https://th.bing.com/th/id/OIP.MWSYxdRgeZOLKUHRPJjj0QHaHa?w=168&h=180&c=7&r=0&o=5&pid=1.7"alt="charlie Puth"></a> </div>
+                </div>
+         </div>
+
+
+       
+        </header>
+
+
+        <section class="queue">
+            <div class="queue-title-and-button">
+                    <span class="queue-title-">Queue</span> 
+                    <span id="queue-button" class="queue-button"><a href="#queue-dropdown">queue +</a></span>
+            </div> 
+
+            <div id="queue-dropdown"class="queue-dropdown-list">
+                <ul  class="queue-dropdown-menu">
+        
+                    <li class="queue-dropdown-item">
+                        <a href="#"> Add To Playlist+ </a>
+                    </li>
+        
+                    <li class="queue-dropdown-item">
+                        <a href="#"> Add To Favourite+ </a>
+                    </li>
+                   
+                    <li class="queue-dropdown-item">
+                        <a href="#queue-body"> close X</a>
+                    </li>
+                   
+                   </ul>
+           </div>
+
+            <div class="queue-body">
+                <div class="queue-item">
+                    <span>01</span>
+                    <a href="#all-of-me"><img src="https://th.bing.com/th/id/OIP.hiTieF-elHogfwir9lwrCAHaHa?w=180&h=180&c=7&r=0&o=5&pid=1.7"></a>
+                    <span class="queue-item-name">All Of Me<span class="queue-item-artist">John Legend</span></span>
+                      <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="queue-item"><span>02</span>
+                    <a href="#player"><img src="https://th.bing.com/th/id/OIP.fGz7K4_lPlwxlR6NB2l8EgHaEK?w=318&h=180&c=7&r=0&o=5&pid=1.7"></a>
+                    <span class="queue-item-name">Gun and roses<span class="queue-item-artist">Imagine Dragon</span></span>
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="queue-item"><span>03</span>
+                    <a href="#player"><img src="https://th.bing.com/th/id/OIP.fGz7K4_lPlwxlR6NB2l8EgHaEK?w=318&h=180&c=7&r=0&o=5&pid=1.7"></a>
+                    <span class="queue-item-name">Gun and roses<span class="queue-item-artist">Imagine Dragon</span></span>
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="queue-item"><span>04</span>
+                    <a href="#player"><img src="https://th.bing.com/th/id/OIP.fGz7K4_lPlwxlR6NB2l8EgHaEK?w=318&h=180&c=7&r=0&o=5&pid=1.7"></a>
+                    <span class="queue-item-name">Gun and roses<span class="queue-item-artist">Imagine Dragon</span></span>
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="queue-item"><span>05</span>
+                    <a href="#player"><img src="https://th.bing.com/th/id/OIP.fGz7K4_lPlwxlR6NB2l8EgHaEK?w=318&h=180&c=7&r=0&o=5&pid=1.7"></a>
+                    <span class="queue-item-name">Gun and roses<span class="queue-item-artist">Imagine Dragon</span></span>
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
+        </section>
+     
+
+    <!-- latest release section -->
+        <section class="latest-release">
+                    <span class="latest-release-title">Latest release</span>
+
+            <div class="latest-release-body">
+            <div class="latest-release-item">
+                                            <a href="#player" target="_parent"><img src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img4.webp" alt="music pic"></a>
+            </div>
+            <div class="latest-release-item">
+                                            <a href="#player" target="_parent"><img src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img3.jpg" alt="music pic"></a>
+            </div>
+            <div class="latest-release-item">
+                                            <a href="#player" target="_parent"><img src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img5.png" alt="music pic"></a>
+            </div>
+            <div class="latest-release-item">
+                <a href="#player" target="_parent"><img src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img4.webp" alt="music pic"></a>
+            </div>
+            <div class="latest-release-item">
+                            <a href="#player" target="_parent"><img src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img3.jpg" alt="music pic"></a>
+            </div>
+            <div class="latest-release-item">
+                            <a href="#player" target="_parent"><img src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img5.png" alt="music pic"></a>
+            </div>
+
+            </div>
+        </section>
+
+    <!-- popular artist section -->   
+        <section id="popular-artist">
+                <span class="popular-artist-title">Popular artist</span>
+
+
+            <div class="popular-artist-body">
+            <div class="popular-artist-item">
+                                            <a href="artist1.html" target="_parent"><img src="https://th.bing.com/th/id/OIP.l8RChrosjC3Bb1QO3ebS4QHaEK?w=289&h=180&c=7&r=0&o=5&pid=1.7" alt="music pic"></a>
+                                            <span class="artist-name">Charlie Puth</span>
+            </div>
+            <div class="popular-artist-item">
+                                            <a href="artist1.html" target="_parent"><img src="https://th.bing.com/th/id/OIP.-FETJaAKqa-WnUmCdpg0LQHaLH?w=186&h=279&c=7&r=0&o=5&pid=1.7" alt="music pic"></a>
+                                            <span class="artist-name">Seelena Gomez</span>
+            </div>
+            <div class="popular-artist-item">
+                                            <a href="artist1.html" target="_parent"><img src="https://th.bing.com/th/id/OIP.NN613DpZ5xQDu2o7DTciwAHaJM?w=138&h=180&c=7&r=0&o=5&pid=1.7" alt="music pic"></a>
+                                            <span class="artist-name">Shawn Mendes</span>
+            </div>
+            <div class="popular-artist-item">
+                <a href="artist1.html" target="_parent"><img src="https://th.bing.com/th/id/OIP.9Pfgc-13faD3SIz8AOPKUgHaDt?w=349&h=174&c=7&r=0&o=5&pid=1.7" alt="music pic"></a>
+                <span class="artist-name">Ed Sheeran</span>
+            </div>
+            <div class="popular-artist-item">
+                            <a href="artist1.html" target="_parent"><img src="https://th.bing.com/th/id/OIP.B-RUIGZWAhen5lH5iCJSHQHaO0?w=116&h=180&c=7&r=0&o=5&pid=1.7" alt="music pic"></a>
+                            <span class="artist-name">Anne Marie</span>
+            </div>
+            <div class="popular-artist-item">
+                            <a href="artist1.html" target="_parent"><img src="https://th.bing.com/th/id/OIP.7L7O_psOyiQ2UVOiK1U1jQHaI-?w=130&h=180&c=7&r=0&o=5&pid=1.7" alt="music pic"></a>
+                            <span class="artist-name">Harry Styles</span>
+            </div>
+            
+            
+            </div>
+        </section>
+    
+    
+    
+        <!-- do class because so in other screen/page  i can use same styling for same feature mdo 
+    for all section that you will use further in other screen/page -->
+       
+    
+      <section class="radio-station-container">
+            <div class="radio-station-logo-container">
+               <img src="https://th.bing.com/th/id/OIP.Zy0Uta0iUtlLANSmasfQmQHaHa?w=177&h=180&c=7&r=0&o=5&pid=1.7" alt="">
+            </div>
+
+            <div class="radio-station-items-body-container">
+
+                <div class="radio-station-items-container">
+                    <!-- <span>Love</span> -->
+                       <a href="#player"> <img src="https://th.bing.com/th/id/OIP.iqgt7lgWbV5Y8wMMIbzW9AHaEo?w=280&h=180&c=7&r=0&o=5&pid=1.7" alt=""></a>
+                </div>
+                <div class="radio-station-items-container">
+                    <!-- <span>Love</span> -->
+                        <a href="#player"> <img src="https://th.bing.com/th/id/OIP.Kxxs2pviCLpPvP1YcjPNNAHaJR?w=186&h=233&c=7&r=0&o=5&pid=1.7" alt=""></a>
+                </div>
+                <div class="radio-station-items-container">
+                    <!-- <span>Workout</span> -->
+                        <a href="#player"> <img src="https://th.bing.com/th/id/OIP.0DqiGSPBOfnf0TWQzzlFCgHaHa?w=186&h=186&c=7&r=0&o=5&pid=1.7" alt=""></a>
+                </div>
+                <div class="radio-station-items-container">
+                    <!-- <span>Chill</span> -->
+                        <a href="#player"> <img src="https://th.bing.com/th/id/OIP.XPub9HsjYiV83IEzcwwc5QHaHa?w=167&h=180&c=7&r=0&o=5&pid=1.7" alt=""></a>
+                </div>
+               
+                <div class="radio-station-items-container">
+                    <!-- <span>Workout</span> -->
+                        <a href="#player"> <img src="https://th.bing.com/th/id/OIP.6aE3CI0xtuDXIKeH9kcE-gHaEK?w=267&h=180&c=7&r=0&o=5&pid=1.7" alt=""></a>
+                </div>
+                <div class="radio-station-items-container">
+                    <!-- <span>Chill</span> -->
+                        <a href="#player"> <img src="https://th.bing.com/th/id/OIP.Bzv3O0HpSK1FRzizcuW-ZQHaKy?w=186&h=270&c=7&r=0&o=5&pid=1.7" alt=""></a>
+                </div>
+
+           </div>
+        </section>
+
+
+    
+        <section class="genre-container">
+         
+            <div class="genre-img-container"> 
+                <span>Melody</span>
+                <img src="https://images.pexels.com/photos/144429/pexels-photo-144429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+              </div>
+          
+          <div class="genre-img-container">
+            <span>Love</span>
+            <img src="https://th.bing.com/th/id/OIP.iqgt7lgWbV5Y8wMMIbzW9AHaEo?w=280&h=180&c=7&r=0&o=5&pid=1.7" alt="">
+          </div>
+       
+          <div class="genre-img-container"> 
+            <span>Chill</span>
+            <img src="https://th.bing.com/th/id/OIP.XPub9HsjYiV83IEzcwwc5QHaHa?w=167&h=180&c=7&r=0&o=5&pid=1.7" alt="">
+          </div>
+
+
+          <div class="genre-img-container"> 
+            <span>dark</span>
+            <img src="https://images.pexels.com/photos/1482476/pexels-photo-1482476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          </div>
+
+          <div class="genre-img-container">
+            <span>Party</span>
+            <img src="https://images.pexels.com/photos/10206936/pexels-photo-10206936.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+          </div>
+
+          <div class="genre-img-container"> 
+            <span>Workout</span>
+             <img src="https://th.bing.com/th/id/OIP.0DqiGSPBOfnf0TWQzzlFCgHaHa?w=186&h=186&c=7&r=0&o=5&pid=1.7" alt="">
+          </div>
+
+
+
+        </section>
+
+
+
+        <section class="latest-songs-container">
+            <span class="latest-song-title">Latest English Songs</span>
+
+            <div class="latest-song-body">
+                <div class="latest-song-item">
+                                                <a href="#player" target="_parent"><img src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img4.webp" alt="music pic"></a>
+                </div>
+                <div class="latest-song-item">
+                                                <a href="#player" target="_parent"><img src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img3.jpg" alt="music pic"></a>
+                </div>
+                <div class="latest-song-item">
+                    <a href="#player" target="_parent"><img src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img4.webp" alt="music pic"></a>
+                </div>
+                <div class="latest-song-item">
+                                    <a href="#player" target="_parent"><img src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img3.jpg" alt="music pic"></a>
+                </div>
+
+                <div class="latest-song-item">
+                    <a href="#player" target="_parent"><img src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img4.webp" alt="music pic"></a>
+                </div>
+                <div class="latest-song-item">
+                                <a href="#player" target="_parent"><img src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img3.jpg" alt="music pic"></a>
+                </div>
+               
+
+            </div>
+        </section>
+       
+       
+       
+       
+        <section class="latest-songs-container">
+            <span class="latest-song-title">Latest Hindi Songs</span>
+
+            <div class="latest-song-body">
+               
+                <div class="latest-song-item">
+                                                <a href="#player" target="_parent"><img src="https://th.bing.com/th/id/OIP.uVx4aWgI64xGl3YTatBaJAHaEK?w=318&h=180&c=7&r=0&o=5&pid=1.7" alt="music pic"></a>
+                </div>
+
+                <div class="latest-song-item">
+                                <a href="#player" target="_parent"><img src="https://th.bing.com/th/id/OIP.9wmG9D8k64J2YNuYQnJ0JAHaHa?w=179&h=180&c=7&r=0&o=5&pid=1.7" alt="music pic"></a>
+                </div>
+
+                <div class="latest-song-item">
+                    <a href="#player" target="_parent"><img src="https://th.bing.com/th/id/OIP.uVx4aWgI64xGl3YTatBaJAHaEK?w=318&h=180&c=7&r=0&o=5&pid=1.7" alt="music pic"></a>
+                </div>
+
+                <div class="latest-song-item">
+                    <a href="#player" target="_parent"><img src="https://th.bing.com/th/id/OIP.9wmG9D8k64J2YNuYQnJ0JAHaHa?w=179&h=180&c=7&r=0&o=5&pid=1.7" alt="music pic"></a>
+                </div>
+
+                <div class="latest-song-item">
+                    <a href="#player" target="_parent"><img src="https://th.bing.com/th/id/OIP.uVx4aWgI64xGl3YTatBaJAHaEK?w=318&h=180&c=7&r=0&o=5&pid=1.7" alt="music pic"></a>
+                </div>
+
+                <div class="latest-song-item">
+                <a href="#player" target="_parent"><img src="https://th.bing.com/th/id/OIP.9wmG9D8k64J2YNuYQnJ0JAHaHa?w=179&h=180&c=7&r=0&o=5&pid=1.7" alt="music pic"></a>
+                </div>
+
+
+            </div>
+        </section>
+
+    </main>
+
+<!----------------------------------------->
+<div id="player" class="audio-player">
+   
+
+    <div class="audio-player-items-1">
+        <img src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img5.png"></a>
+    </div>
+    <div class="audio-player-items-2">
+        <span class="name">Don’t Start Now</span>
+    </div>
+    <div class="audio-player-items-3"> 
+        <a href="#queue-body" >X</a>
+    </div>
+    <div class="audio-player-items-4">
+        <span class="artist">Dua Lipa</span>
+    </div>
+    <div class="audio-player-items-5">
+        <audio id="all-of-me" controls src="../media/Dua Lipa - Don’t Start Now.mp3"  ></audio>
+    </div>
+        
+         
+
+   
+</div>
+
+
+
+
+<footer>
+   <p>Thanks for using our music player </p>
+</footer>
+</body>
+</html>
+
+<!-- {
+  "Mobile": [
+    320,
+    675
+  ],
+  "Tablet": [
+    1024,
+    765
+  ],
+  "Desktop": [
+    1400,
+    800
+  ],
+  "Desktop HD": [
+    1920,
+    1080
+  ]
+} -->
