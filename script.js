@@ -1,36 +1,23 @@
 //fetch all element from DOM that we will manipulate
-const body= document.body;//use to update body bg image
-const banner= document.querySelector(".banner") ;//use to update player banner bg image
 const trackImg = document.querySelector("#music img") ;//use to update artist profile image
 const songName= document.querySelector("#details h2") ;//use to update song name
 const artistName= document.querySelector("#details p") ;//use to update artist name
 const shuffle= document.querySelector("#control i:nth-of-type(1)") ;//use to update control
 const backward= document.querySelector("#control i:nth-of-type(2)") ;//use to update control
-
 const play = document.querySelector("#control i:nth-of-type(3)") ;//use to update control
-// const pause= document.querySelector(".controls-btn i:nth-of-type(4)") ;//use to update control
 const forward= document.querySelector("#control i:nth-of-type(4)") ;//use to update control
-
 const redo= document.querySelector("#control i:nth-of-type(5)") ;//use to update control
 const progressBar= document.getElementById("progress") ;//use to update slider
 const progress= document.getElementById("bar") ;//use to update slider
-
 const timerStart= document.querySelector("#progress-bar-container span:nth-of-type(1)");//use to update timer
 const timerEnd = document.querySelector("#progress-bar-container span:nth-of-type(2)") ;//use to update timer
 const like= document.querySelector("#music i:nth-of-type(1)") ;//use to update like
 const unLike= document.querySelector("#music i:nth-of-type(2)");//use to update unlike
-
-const progressB= document.getElementById("bar") ;//use to update slider
-
 const volume= document.querySelector("#volume-container input");//use to update unlike
 const volumeIcon= document.querySelector("#volume-container i");//use to update unlike
 
 
-
-//hide pause control
-// pause.style.display='none;'
-
-//create an array of songs
+//create an array of tracks/songs
 let tracks = [
     {
         id:0,
@@ -92,21 +79,17 @@ let count=0;
 //create audio element
 const audio = document.createElement('audio');
 audio.src=tracks[count].trackSrc;
-// body.style.backgroundImage=`url(${tracks[count].bannerSrc})`;
-// banner.style.backgroundImage=`url('${tracks[count].bannerSrc}')`;
 trackImg.src=tracks[count].bannerSrc;
 songName.innerText=tracks[count].songName;
 artistName.innerText=tracks[count].artistName;
 
-// console.log(audio.duration,audio);
-// timerEnd.innerText=Math.floor(audio.duration); timeUpdate event use for time set
-
-
-
+// add event listener to play control and play music
+play.addEventListener('click',playMusic);
+forward.addEventListener('click',forwardPlay);
+backward.addEventListener('click',backwardPlay);
 
 
 //create func to play audio
-//can't use same identifier also in func
 function playMusic(){
     setTime(timerEnd,audio.duration);
     // click to play 
@@ -122,11 +105,7 @@ function playMusic(){
         audio.pause();
     }
 }
-
 // playMusic();
-// add event listener to play control and play music
-play.addEventListener('click',playMusic);
-
 
 // make func to go to next music
 function forwardPlay(){
@@ -138,12 +117,11 @@ function forwardPlay(){
         count++;
     }
     audio.src=tracks[count].trackSrc;
-    // banner.style.backgroundImage=`url('${tracks[count].bannerSrc}')`;
     trackImg.src=tracks[count].bannerSrc;
     songName.innerText=tracks[count].songName;
     artistName.innerText=tracks[count].artistName;
 
-    //when directly click on next with click on play btn
+    //when directly click on next with click on play btn, some edge cases checks
      if(play.classList[1]==='fa-play-circle-o'){
         play.classList.remove('fa-play-circle-o');
         play.classList.add('fa-pause-circle-o');
@@ -153,26 +131,15 @@ function forwardPlay(){
    
 }
 
-forward.addEventListener('click',forwardPlay);
-
 // make func to go to back music
-
 function backwardPlay(){
     console.log("backward control is click");
-    // document.querySelector(".box").classList.add("animation");
-
-    // play.classList.remove('fa-pause');
-    // play.classList.add('fa-play');
-    // audio.pause();
-
     if(count===0){
         count=tracks.length-1;
     }else{
         count--;
     }
     audio.src=tracks[count].trackSrc;
-    // body.style.backgroundImage=`url(${tracks[count].bannerSrc})`;
-    // banner.style.backgroundImage=`url('${tracks[count].bannerSrc}')`;
     trackImg.src=tracks[count].bannerSrc;
     songName.innerText=tracks[count].songName;
     artistName.innerText=tracks[count].artistName;
@@ -180,15 +147,11 @@ function backwardPlay(){
      //when directly click on next with click on play btn
      if(play.classList[1]==='fa-play-circle-o'){
         play.classList.remove('fa-play-circle-o');
-        play.classList.add('fa-pause-circle-o');
-        // audio.play();
-    }
-    // audio.play();
+        play.classList.add('fa-pause-circle-o');  
+     }
+        
     audio.play();
 }
-
-backward.addEventListener('click',backwardPlay);
-
 
 
 //redo functionality
@@ -206,21 +169,18 @@ redo.addEventListener('click',repeatMusic);
 
 
 // slider timer and timeline
-function setTime(output,input){//again again set time change//input = seconds,output=timerStart element
+function setTime(output,input){
+    //again again set time change//input = seconds,output=timerStart element
 //we use audioObj.currentTime to get current time of audio and than convert to minutes and embed on player
-// console.log(input);
-if(isNaN(input)){
-    return;
-}
-    //minutes calculate
-    const minutes = Math.floor(input / 60);//2.9=return 2,remove decimal part
-    const seconds = Math.floor(input % 60);
-    /*61.223 second
-      m=1 (floor use)
-      s=1 (floor use)
+   
+    if(isNaN(input)){
+        return;
+    }
 
-    */
-// console.log(minutes," ",seconds,input);
+    //minutes calculate
+    const minutes = Math.floor(input / 60);
+    const seconds = Math.floor(input % 60);
+
     if(seconds<10){
         output.innerText = minutes + ":0" + seconds;
     }else{
@@ -246,17 +206,13 @@ function startDragging(){
 
 //drag slide is dragging/mouse over it
 function dragProgress(e){
-    // console.log(e);
-    // console.log("outside",e.offsetX);
     if(isDragging){
         const progressBarWidth = progressBar.offsetWidth;//pb upto fill
         const clickOffset = e.offsetX;console.log(clickOffset);
         const newTime = (clickOffset/progressBarWidth) * audio.duration;
 
         audio.currentTime = newTime;
-        // console.log(newTime);
         progress.style.width = (clickOffset/progressBarWidth) * 100 + "%";
-        // isDragging=false;
     }
 }
 
@@ -268,33 +224,14 @@ function stopDragging(){
 
 
 
-/**
- * //drag slide start
-progress.onmousedown = function(){
-    isDragging=true;
-}
-
-//drag slide is dragging/mouse over it
-progress.onmouseover = function(){
-    if(isDragging){
-        const progressWidth = this.offsetWidth;//pb upto fill
-    }
-}
-
-
-//drag slide end
-progress.onmouseup = function(){
-    isDragging=false;
-}
- */
 
 
 
 
 //when-when audio track time change this event get trigger
 audio.addEventListener('timeupdate',()=>{
-// //set audio length time
-// console.log(audio.duration);
+// set audio time on player
+
 
 if(!isDragging){
     if(audio.currentTime===audio.duration){
@@ -309,51 +246,21 @@ if(!isDragging){
         setTime(timerStart,currentAudioTime);
     
         progress.style.width=timePercentage;
-    
-}
-
-    //RANGE INPUT WAY
-    // progressB.value=audio.currentTime * (parseInt(progressB.max)/audio.duration);
-    // console.log(audio.currentTime * (parseInt(progressB.max)/audio.duration));
-    //parseInt convert sting into number and remove decimals
-    //Math.floor only remove decimals
-
-
-    // const =parseInt(progressB.max)/audio.duration;
+    }
 })
 
 
 
 progressBar.onclick=function(e){
-    // console.log(e);
    if(!isDragging){
     progress.style.width=e.offsetX;
     audio.currentTime= (e.offsetX/progressBar.offsetWidth) * audio.duration;
 
    }
-    /*
-    0s=( progresswidth=0/totalwidth )seconds
-    */
+   //0s=( progresswidth=0/totalwidth )seconds
 }
 
-//  RANGE INPUT WAY
-// progressB.value='0';
-// progressB.onclick=function(e){
-//     // console.log(e);
-//     progressB.value=Math.floor(parseInt(progressB.value)+(100/audio.duration));
-//     audio.currentTime = (progressB.value/progressB.max) * audio.duration;
-    
-//     // console.log(progressB.value);
-    
-//     /*
-//     0s=( progresswidth=0/totalwidth )seconds
-//     */
-// }
-
-
-
-//likes
-
+//likes and unlike
 like.onclick=function(){
     if(unLike.classList[2] === 'unlike'){
         unLike.classList.remove('unlike');
@@ -370,7 +277,7 @@ unLike.onclick=function(){
 
 
 
-//volume
+//volume and volumeIcon
 volume.value=20;
 audio.volume = 20/volume.max;
 volume.onclick = function(){
@@ -405,7 +312,8 @@ volumeIcon.onclick = changeIcon;
 //shuffle
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));//0.0 to 1.0 any value multiply output less than that any value  .9 * 4=3.6,.9 * 5=4.5 max , single digit max <multiply value
+    //0.0 to 1.0 any value multiply output less than that any value  .9 * 4=3.6,.9 * 5=4.5 max , single digit max <multiply value
+      const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
 
       //temp=arr[j]
@@ -441,10 +349,36 @@ another we can set at time when we change current time of audio so it show like 
 
 mousemove we can CREATE OWN MANUALLY DRAG FEATURE
 --> PARENT CONTAINER TOWARD MOVE ,offsetX USE
+
+
+------------- or -------------
+RANGE INPUT WAY (using input element type range)
+    progressB.value=audio.currentTime * (parseInt(progressB.max)/audio.duration);
+    console.log(audio.currentTime * (parseInt(progressB.max)/audio.duration));
+    parseInt convert sting into number and remove decimals
+    Math.floor only remove decimals
+
+
+    const =parseInt(progressB.max)/audio.duration;
+
+    
+ RANGE INPUT WAY
+progressB.value='0';
+progressB.onclick=function(e){
+    // console.log(e);
+    progressB.value=Math.floor(parseInt(progressB.value)+(100/audio.duration));
+    audio.currentTime = (progressB.value/progressB.max) * audio.duration;
+    
+    // console.log(progressB.value);
+    
+    
+    0s=( progresswidth=0/totalwidth )seconds
+    
+}
 */
 
 
-//step to create player
+//4 steps to create player
 /**
  * 1. create audio element
  * 2. using audio obj time manage

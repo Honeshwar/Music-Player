@@ -19,20 +19,10 @@ body{
 
 
 /********************* layout ****************************************/
-#app{
-    /* overflow-y: auto; */
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: space-between;
-}
 
 main{
     width: 100%;
     height: 75.1vh;
-    /* min-width: 500px; */
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
@@ -40,37 +30,59 @@ main{
 
 
 }
+/********** main section scrollbar **************/
+
+.main-section-scrollbar:hover::-webkit-scrollbar{
+    display: block;
+    
+}
+.main-section-scrollbar::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+    display: block;
+   
+    }
+.main-section-scrollbar::-webkit-scrollbar-track{
+    width: 1px;
+    background-color: #fbfcff;
+    border-radius:20px ;
+    
+}
+.main-section-scrollbar::-webkit-scrollbar-thumb{
+    width:1px;
+    background-color: #041855;
+    border-radius:20px ;
+}
+.main-section-scrollbar::-webkit-scrollbar-button{
+    width: 5px;
+    background-color: #031549;
+    border-radius:200px ;
+    display: none;
+    
+}
 aside{ 
     position:fixed;
     top:100px;
     right:30px;
     width:600px ;
     height: 80%;
-  /* box-shadow:  0 0 5px 3px #4b4b54;
-  border-radius: 20px; */
+ 
 }
 
 /* navbar */
 #navbar{
     width: 100%;
-    /* border: solid; */
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
-
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 12; */
 }
 
 /*(******************** brand logo and name ****************************************/
 #brand-logo-and-name{
     display: flex;
     align-items: center;
-    /* border: solid; */
     width: fit-content;
     
 }
@@ -145,7 +157,6 @@ aside{
 .dropdown-item:nth-child(2) input{
     padding: 10px;
     padding-left:50px;
-    /* border: solid; */
     font-size: 1.2rem;
     border-radius: 12px;
     width:100%;
@@ -179,8 +190,6 @@ aside{
 
 /************************ sign up form style ********************/
 #signUp-form{
-    
-    /* border: solid; */
     z-index: 7;
     position: fixed;
     top: 0;
@@ -193,7 +202,6 @@ aside{
     justify-content: center;
     align-items: center;
 
-    /* background-image: url('../../../projects/assets/image/web-design-2038872.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(6, 78, 119, 0.932);
@@ -207,11 +215,8 @@ aside{
 }
 
 .signUp-form-items-container{
-    /* width: 50%;
-    height: 50%; */
     width: 500px;
     height:600px;
-    /* border:solid white; */
 
     background-image: linear-gradient(45deg,#fcfcfcfa,rgb(23, 211, 139));
 
@@ -236,9 +241,6 @@ aside{
     flex-direction: column;
     justify-content: center;
     align-items: start;
-
-    /* color: white; */
-    /* margin: 0 auto; */
 }
 .signUp-item label{
     padding-bottom: 10px;
@@ -271,7 +273,6 @@ aside{
 #submit-button:hover{
   color: white;
   background-color: red;
-  /* background-image: linear-gradient(45deg,red,green); */
 
 }
 #close-button{
@@ -301,7 +302,6 @@ width: 100%;
 height:100%;
 padding: 10px;
 
-/* box-shadow: inset 0 0 3px 3px white; */
 border-radius: 20px;
 }
 
@@ -330,13 +330,12 @@ border-radius: 20px;
     display: none;
     width:200px;
     height:fit-content;
-    /* padding:10px; */
-    /* border: solid; */
     float: right;
 
     position: absolute;
     top:100%;
     right:0px;
+
     /* increase stacking order of this element */
     z-index: 1;
 }
@@ -352,9 +351,6 @@ border-radius: 20px;
     padding: 10px;
     
 }
-/* .queue-dropdown-item{
-   
-} */
 .queue-dropdown-item a{
     text-decoration-line: none;
     font-size: 1rem;
@@ -379,7 +375,7 @@ border-radius: 20px;
     color:rgb(185, 1, 1);
     font-size: 1.4rem;
     padding: 10px;
-    /* border: solid; */
+
     /* so, close btn not visible about queue+ btn */
     opacity: 0;
 }
@@ -390,7 +386,6 @@ border-radius: 20px;
     height: 85%;
     padding: 10px;
     overflow-y: auto;
-    /* border: solid red; */
     padding-right: 30px;
 }
 
@@ -461,25 +456,6 @@ border-radius: 20px;
 .like-btn:hover{
     color: rgb(197, 5, 5);
 }
-/* animation on click heart beat (resize) */
-
-
-
-
-/* no need of it because anchor tag on navigation within a page close other target state element ,
- *** means within page only one target state active at a time , other will be closed/removed*/
-/* #a{
-    display: block;
-    width: 100%;
-}
-
-#a:target{
-    background-color: red;
-}
-#b:target{
-    background-color: red;
-} */
-
 
 
 /********************* header section style ****************************************/
@@ -487,11 +463,9 @@ border-radius: 20px;
     width: 75%;
     min-height:500px;
     position: relative;
-/* border: solid; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-wrap: no-wrap; */
     
 }
 .image-frame{
@@ -523,43 +497,26 @@ border-radius: 20px;
     transform: scale(1.1);}
 #frame3{ z-index: 4;  left: 150px;  }
 #frame4{ z-index: 3; right: 350px;  transform:  scale(1.1);;}
-#frame5{ z-index: 2; right:200px; 
-     /* transform: rotate(30deg) scale(1.1);  */
-     perspective: 399999999999999; 
-    
+#frame5{ 
+    z-index: 2; right:200px; 
+    perspective: 399999999999999; 
 }
 #frame6{
     z-index: 2;
-    /* transform: scale(1.9); */
 }
-/* 
-.image-frame:hover,#frame4:hover{
-    transform: scale(1.6) translate(50px);
-    z-index: 0;transition: all 3s ease;}
 
-#frame1:hover,#frame2:hover,#frame3:hover{
-    transform: scale(1.6) translateX(50px);
-z-index: 9;
-left: 40%;
-
-transition: all 3s ease;
-} */
 
 /********************* latest release section style ****************************************/
 /* common */
 main section{
     padding-left:100px; 
-        /* width: 100%; */
-        width: 70%;
-        height:fit-content;
+    width: 70%;
+    height:fit-content;
 
-        margin-top: 30px;
+    margin-top: 30px;
 }
 section{
-    /* width: 100%; */
     width: 60%;
-    /* margin: auto; */
-    /* border: solid; */
 }
 section h2{
     color: white;
@@ -568,9 +525,6 @@ section h2{
     font-family: monospace;
 }
 
-
-#latest-release {
-}
 .section-title{
     color: white;
     padding: 30px;
@@ -578,8 +532,6 @@ section h2{
     font-family: monospace;
 }
 .release-song-body{
-    /* padding: 10px 10px 10px 30px; */
-    /* overflow-x: auto; */
     display: flex;
     flex-wrap: wrap;
 }
@@ -595,10 +547,6 @@ section h2{
 
 
 /********************* popular artist section style ****************************************/
-#popular-artist{
-    /* border: solid; */
-    /* height: auto; */
-    }
 #popular-artist-body{
     display: flex;
     align-items: center;
@@ -606,7 +554,6 @@ section h2{
 
 }
 .popular-artist-body-item{
-    /* display: flex; */
     color: white;
     padding-inline: 20px;
 }
@@ -624,58 +571,8 @@ section h2{
     border-radius: 100%;
 }
 
-#artist1{
-    width: 100%;height: 100%;border-radius: 100%;
-    /* background-image:url('https://th.bing.com/th/id/OIP.l8RChrosjC3Bb1QO3ebS4QHaEK?w=289&h=180&c=7&r=0&o=5&pid=1.7');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:  center ; */
-
-}
-#artist2{
-    width: 100%;height: 100%;border-radius: 100%;
-    /* background-image:url('https://th.bing.com/th/id/OIP.-FETJaAKqa-WnUmCdpg0LQHaLH?w=186&h=279&c=7&r=0&o=5&pid=1.7');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:  center ; */
-
-}
-#artist3{
-    width: 100%;height: 100%;border-radius: 100%;
-    /* background-image:url('https://th.bing.com/th/id/OIP.NN613DpZ5xQDu2o7DTciwAHaJM?w=138&h=180&c=7&r=0&o=5&pid=1.7');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:  center ; */
-
-}
-#artist4{
-    width: 100%;height: 100%;border-radius: 100%;
-    /* background-image: url('https://th.bing.com/th/id/OIP.9Pfgc-13faD3SIz8AOPKUgHaDt?w=349&h=174&c=7&r=0&o=5&pid=1.7');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:  center ; */
-
-}
-#artist5{
-    width: 100%;height: 100%;border-radius: 100%;
-    /* background-image:url('https://th.bing.com/th/id/OIP.B-RUIGZWAhen5lH5iCJSHQHaO0?w=116&h=180&c=7&r=0&o=5&pid=1.7');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:  center ; */
-
-}
-#artist6{
-    width: 100%;height: 100%;border-radius: 100%;
-    /* background-image:url('https://th.bing.com/th/id/OIP.7L7O_psOyiQ2UVOiK1U1jQHaI-?w=130&h=180&c=7&r=0&o=5&pid=1.7');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:  center ; */
-
-}
-
 .artist-name{
     padding: 30px 0 20px;
-    /* border: solid; */
     text-align: center;
     font-family: 'Courier New';
     font-weight: 900;
@@ -688,17 +585,9 @@ section h2{
 #radio-station{
     width: 86.6%;
     width: 65%;
-    /* border: solid; */
     margin: 10px;
 
 }
-
-/* #radio-station-logo{
-    margin-left: 30px;
-    width: 150px;
-    height: 150px;
-    border-radius: 20px;
-} */
 #radio-channels-container{
     width: 100%;
     height:fit-content;
@@ -706,14 +595,12 @@ section h2{
     align-items: center;
   flex-wrap: wrap;
     padding: 20px;
-    /* border: solid; */
    
 }
-#radio-channels-container div{
+.radio-station-items-container{
 
     border-radius: 100%;
     width: 100px;
-    /* height: 200px; */
     margin-inline: 20px;
     padding: 10px 90px;
 
@@ -724,11 +611,20 @@ section h2{
 
     margin-bottom: 10px;
 
+    position: relative;
    
 }
 
+.radio-station-items-container span{
+    color: white;
+    position: absolute;
+    z-index: 2;
+    font-size: x-large;
+    font-family: cursive;
+    text-shadow: 0 0 30px black;
+}
+
 .radio-channel-logo{ 
-    /* display: none; */
     width: 130px;
     height: 130px;
     border-radius: 100%;
@@ -738,9 +634,6 @@ section h2{
   
 }
 .radio-channel-logo:hover{ 
-    /* display: none; */
-    /* width: 150px;
-    height: 150px;  */
     transform: scale(1.2);
     opacity: 1;
     transition: all .3s ease-in-out;
@@ -767,7 +660,6 @@ section h2{
 }
 .genre-image-container{
     border-radius: 20px;
-    /* margin-inline:30px ; */
 
     /* do position relative so ,  nearest ancestor position element for span will be this element */
     position: relative;
@@ -784,8 +676,6 @@ transition: transform .3s ease-in-out;
 
 }
 .genre-image-container  img{
-    /* width:var(--music-poster-width,200px);
-    height: var(--music-poster-height,150px); */
     width: 200px;
     height:150px;
     border-radius: 30px;
@@ -801,26 +691,13 @@ transition: transform .3s ease-in-out;
 
  
 /********************* latest songs section style ****************************************/
-.latest-songs-container{
-   
-    /* border: solid; */
-}
-
-.latest-songs-container h2{
-    /* padding: 10px; */
-}
-
 .latest-song-body{
-    /* padding: 0 px; */
     width: 100%;
     height: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    /* overflow-x: auto; */
-/* border: solid; */
-   
    
 }
 .latest-song-body div{
@@ -837,6 +714,9 @@ transition: transform .3s ease-in-out;
     height: var(--music-poster-height,150px);
     border-radius: 20px;
 }
+
+
+
 /****************** Footer *******************/
 #footer{
     width: 60%;
@@ -847,7 +727,6 @@ main footer{
     height:300px;
     padding: 20px;
     text-align: start;
-    /* border: solid; */
     margin-left:130px;
     margin-top: 20px;
     background-color: cadetblue;
@@ -860,87 +739,6 @@ main footer{
     text-align: center;
     padding: 5px;
     font-family: 'Trebuchet MS'
-}
-
-
-
-/* common styling  for scrollbar*/
-/* new */
-/* .main-section-scrollbar:hover::-webkit-scrollbar{
-    display: block;
-
-    width:13px
-    
-} */
-
-
-.main-section-scrollbar:hover::-webkit-scrollbar{
-    display: block;
-    /* width:13px */
-    
-}
-.main-section-scrollbar::-webkit-scrollbar{
-    width: 10px;
-    height: 10px;
-    /* background-color: #91a0da; */
-    display: block;
-   
-    }
-.main-section-scrollbar::-webkit-scrollbar-track{
-    width: 1px;
-    background-color: #fbfcff;
-    border-radius:20px ;
-    
-}
-.main-section-scrollbar::-webkit-scrollbar-thumb{
-    width:1px;
-    background-color: #041855;
-    border-radius:20px ;
-}
-.main-section-scrollbar::-webkit-scrollbar-button{
-    width: 5px;
-    background-color: #031549;
-    border-radius:200px ;
-    display: none;
-    
-}
-
-/* section scrollbar */
-.section-scrollbar:hover::-webkit-scrollbar{
-    display: block;
-    /* width:13px */
-    /* cursor: wait; */
-}
-.section-scrollbar::-webkit-scrollbar{
-    width: 11px;
-    height: 5px;
-    /* background-color: #91a0da; */
-    display: block;
-    
-    }
-.section-scrollbar::-webkit-scrollbar-track{
-    width: 1px;
-    background-color: #fbfcff;
-    /* border/-radius:20px ; */
-    
-    
-}
-.section-scrollbar::-webkit-scrollbar-thumb{
-    width:1px;
-    background-color: rgb(11, 53, 238);
-    /* border-radius:20px ; */
-}
-.section-scrollbar::-webkit-scrollbar-button{
-    width: 5px;
-    /* background-color: #0443ff; */
-    border-radius:200px ;
-    display: none;
-    
-}
-
-section{
-    padding-right: 50px;
-    /* margin: 0; */
 }
 
 
@@ -981,7 +779,6 @@ section{
     justify-content: space-evenly;
 }
 #details p{
-    /* padding-block: 10px; */
     font-size: .8em;
     font-family: cursive;
     letter-spacing: 2px;
@@ -1019,22 +816,11 @@ width: 100%;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
-/* border: solid; */
 }
-/* #progress-bar input{
-    width: 80%;
-    display: flex;
-    justify-content: space-evenly;
-    } */
-
-#progress-bar-container span{
-   /* padding-inline:10px ; */
-} 
 
 #more-controls > i,#more-controls div{
     font-size: 2rem;
     padding: 20px;
-/* justify-content: space-between; */
 }
 #more-controls i:hover{
     color: aqua;
@@ -1046,25 +832,17 @@ align-items: center;
     margin: 20px 0;
     width:70%;
     height: 10px;
-    /* padding:20px 0; */
     background-color: rgb(255, 254, 253);
 
     border-radius: 15px;
-    /* border-top-left-radius: 0;
-    border-bottom-left-radius:0 ; */
-    /* border: 2px outset ;
-     box-shadow: inset 0 0 2px 2px ; */
     position: relative;
 
 
 }
 #progress #bar{
-    /* display: none; */
     width:100px;
     height: 100%;
     border-radius: 15px;
-    /* border-top-left-radius: 0;
-    border-bottom-left-radius:0 ; */
     background-color:rgb(7, 130, 175);
     position: relative;
     left:.5px
@@ -1079,96 +857,71 @@ align-items: center;
     position: absolute;
     right: -10px;
     bottom: -4.4px;
-    /* border-top-left-radius: 0;
-    border-bottom-left-radius:0 ; */
 }
 
 
 
 @media screen and (max-width:700px) {
     /********************* navbar ****************************************/
-        #navbar{
-            width: 100%;
-            /* border: solid; */
-            padding: 10px;
-            display: block;
-            justify-content: space-between;
-            align-items: center;
-    
-            position: relative;
-        }
-    
-       
-    
+    #navbar{
+        width: 100%;
+        padding: 10px;
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+
+        position: relative;
+    }
     /********************* dropdown list ****************************************/
-        #dropdown-list-container,#signUp-form{
-            display: none;
+    #dropdown-list-container,#signUp-form{
+        display: none;
+    }
+    #dropdown-list-container:target{
+        display: block;
+        width: 100%;
+    }
+    #dropdown-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center
+    }
+    .dropdown-item{
+        width: 100%;
+        padding-block: 20px;
+    }
+    .dropdown-item:nth-child(2) input{
+        width: 80%;
+        padding: 12px;
+        padding-left: 50px;
         }
-        #dropdown-list-container:target{
-            display: block;
-            width: 100%;
-        }
-        #dropdown-menu{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center
-        }
-        .dropdown-item{
-            /* border: solid; */
-            width: 100%;
-            padding-block: 20px;
-        }
-        .dropdown-item:nth-child(2) input{
-           width: 80%;
-           padding: 12px;
-           padding-left: 50px;
-         }
-         
-        .dropdown-item:nth-child(2) i{
-            position: absolute;
-            left: 110px;
-        }
-        #close-dropdown{
-            display: block;
-            position: absolute;
-            top:30px; 
-            right: 10px;
-            /* border: solid; */
-    
-            /* close button i put above of hamburg so on , hamburg behave toggle on/off */
-            opacity: 0;
-        }
-         
+        
+    .dropdown-item:nth-child(2) i{
+        position: absolute;
+        left: 110px;
+    }
+    #close-dropdown{
+        display: block;
+        position: absolute;
+        top:30px; 
+        right: 10px;
+
+        /* close button i put above of hamburg so on , hamburg behave toggle on/off */
+        opacity: 0;
+    }
+        
     
     /********************* hamburg ****************************************/
         #hamburg{
             display: block;
             font-size: 3rem;
-            /* background-color: rgb(40, 19, 19); */
             position: absolute;
             top:30px;
             right: 10px;
         }
         #hamburg a{
             color: white;
-            
         }
-    
-    
-    
-        /* no need of it because anchor tag on navigation in page close other target state */
-        /* #hamburg:target #dropdown-list-container{
-            display: none; 
-            /* close btn also display none 
-    
-        } */
-    
-    /********************* dropdown list ****************************************/
-    
-    
-    /********************* signUp form ****************************************/
-    
     }
     
     @media screen and (max-width:1550px) {
@@ -1215,18 +968,11 @@ align-items: center;
             height: fit-content;
         }
         #latest-release,#popular-artist,#radio-station,#genre-container {
-            /* padding-left:100px;  */
-                /* width: 100%; */
-                width: 100%;
-                height:fit-content;
-        
-               
+            width: 100%;
+            height:fit-content;
         }
       #latest-release .release-song-body{
-            /* width: 100%; */
             width: 100%;
-            /* margin: auto; */
-           
         }
 
          #footer{
@@ -1240,11 +986,9 @@ align-items: center;
             min-height:500px;
             position: relative;
             margin: auto;
-        /* border: solid; */
             display: flex;
             justify-content: center;
             align-items: center;
-            /* flex-wrap: no-wrap; */
         }
         .image-frame{
             width: 200px;
@@ -1264,7 +1008,6 @@ align-items: center;
             display: none;
             font-size: 2rem;
             padding: 20px;
-        /* justify-content: space-between; */
         }
         #player{
             justify-content: space-evenly;
@@ -1275,7 +1018,7 @@ align-items: center;
    
 
 
-
+/* some common style and classes */
 .like{
     color: rgb(242, 1, 1);
     text-shadow: 0 0 2px white;

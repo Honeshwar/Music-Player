@@ -1,7 +1,0 @@
-/* help to select root element(html) , so all descendant will can use this variable that i write*/
-:root{
-
-    --music-poster-width:200px;
-    --music-poster-height:150px;
-    
-}
