@@ -1,7 +1,7 @@
 //fetch all element from DOM that we will manipulate
 const body= document.body;//use to update body bg image
 const banner= document.querySelector(".banner") ;//use to update player banner bg image
-const artistProfile= document.querySelector("#music img") ;//use to update artist profile image
+const trackImg = document.querySelector("#music img") ;//use to update artist profile image
 const songName= document.querySelector("#details h2") ;//use to update song name
 const artistName= document.querySelector("#details p") ;//use to update artist name
 const shuffle= document.querySelector("#control i:nth-of-type(1)") ;//use to update control
@@ -31,36 +31,54 @@ const volumeIcon= document.querySelector("#volume-container i");//use to update 
 // pause.style.display='none;'
 
 //create an array of songs
-const tracks = [
+let tracks = [
     {
+        id:0,
+        songName:"All Of Me",
+        artistName:"John Legend",
+        artistImgSrc:"./assets/image/all of me.jpg",
+        bannerSrc:"./assets/image/all of me.jpg",
+        trackSrc:"./assets/music/All Of Me.mp3",
+        isFavorite:false,
+    },
+    {
+        id:1,
         songName:"Hurts So Good",
         artistName:"Astrid S",
         artistImgSrc:"./assets/image/Astrid S.jpg",
         bannerSrc:"./assets/image/Hurts So Good.jpg",
         trackSrc:"./assets/music/Astrid S  Hurts So Good.mp3",
+        isFavorite:false,
     },
     {
+        id:2,
         songName:"SIX FEET UNDER Lyrics",
         artistName:"Billie Eilish  ",
         artistImgSrc:"./assets/image/Billie Elilish.jpg",
         bannerSrc:"./assets/image/SIX FEET UNDER.jpg",
         trackSrc:"./assets/music/Billie Eilish  SIX FEET UNDER Lyrics.mp3",
+        isFavorite:false,
     },
     {
+        id:3,
         songName:"Make You Mine Put Your Hand in ",
         artistName:"PUBLIC",
          artistImgSrc:"./assets/image/PUBLIC.jpg",
         bannerSrc:"./assets/image/Make You Mine Put Your Hand in.jpg",
         trackSrc:"./assets/music/PUBLIC  Make You Mine Put Your Hand in .mp3",
+        isFavorite:false,
     },
     {
+        id:4,
         songName:"Dancing With Your Ghost Li",
         artistName:"Sasha Sloan",
         artistImgSrc:"./assets/image/sasha sloan.jpg",
         bannerSrc:"./assets/image/Dancing With Your Ghost Li.jpg",
-        trackSrc:"./assets/music/Sasha Sloan  Dancing With Your Ghost Li.mp3",
+        trackSrc:"./assets/music/Sasha_Alex_Sloan_-_Dancing_With_Your_Ghost_(Jesusful.com).mp3",
+        isFavorite:false,
     },
     {
+        id:5,
         songName:"STAY",
         artistName:"The Kid LARI and Justin Bibber ",
         artistImgSrc:"./assets/image/justin  and kid.jpg",
@@ -76,7 +94,7 @@ const audio = document.createElement('audio');
 audio.src=tracks[count].trackSrc;
 // body.style.backgroundImage=`url(${tracks[count].bannerSrc})`;
 // banner.style.backgroundImage=`url('${tracks[count].bannerSrc}')`;
-artistProfile.src=tracks[count].artistImgSrc;
+trackImg.src=tracks[count].bannerSrc;
 songName.innerText=tracks[count].songName;
 artistName.innerText=tracks[count].artistName;
 
@@ -121,7 +139,7 @@ function forwardPlay(){
     }
     audio.src=tracks[count].trackSrc;
     // banner.style.backgroundImage=`url('${tracks[count].bannerSrc}')`;
-    artistProfile.src=tracks[count].artistImgSrc;
+    trackImg.src=tracks[count].bannerSrc;
     songName.innerText=tracks[count].songName;
     artistName.innerText=tracks[count].artistName;
 
@@ -155,7 +173,7 @@ function backwardPlay(){
     audio.src=tracks[count].trackSrc;
     // body.style.backgroundImage=`url(${tracks[count].bannerSrc})`;
     // banner.style.backgroundImage=`url('${tracks[count].bannerSrc}')`;
-    artistProfile.src=tracks[count].artistImgSrc;
+    trackImg.src=tracks[count].bannerSrc;
     songName.innerText=tracks[count].songName;
     artistName.innerText=tracks[count].artistName;
     
@@ -439,3 +457,46 @@ mousemove we can CREATE OWN MANUALLY DRAG FEATURE
 
 // new
 
+const PlayTracksOnClick = document.getElementsByClassName("on-click-play-track");
+const favorites = document.querySelectorAll('.queue-body-item i');
+
+for (const element of PlayTracksOnClick) {
+    element.addEventListener('click',function () {
+        const id = element.getAttribute('data-trackId');
+        audio.src = tracks[id].trackSrc;
+
+        console.log(tracks[id]);
+
+        trackImg.src=tracks[id].bannerSrc;
+        songName.innerText=tracks[id].songName;
+        artistName.innerText=tracks[id].artistName;
+    
+        //when directly click on next with click on play btn
+        //user click after pause music,checks
+         if(play.classList[1]==='fa-play-circle-o'){
+            play.classList.remove('fa-play-circle-o');
+            play.classList.add('fa-pause-circle-o');
+        }
+        audio.play();
+        
+    });
+}
+
+for (const favorite of favorites) {
+    favorite.addEventListener('click',function () {
+        const trackId =parseInt( favorite.getAttribute('data-trackId'));
+       
+        favorite.classList.toggle('like');
+// console.log(typeof trackId);
+        tracks = tracks.map((track,index)=>{
+            if(trackId === index){
+                track.isFavorite = !track.isFavorite;
+            }
+            console.log(track);
+            return track;
+        });
+        console.log(tracks);
+
+        
+    });
+}

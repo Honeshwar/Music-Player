@@ -41,7 +41,7 @@
         <div id="dropdown-list-container"class="dropdown-list-container">
             <ul  id="dropdown-menu">
                 <li class="dropdown-item">
-                    <a href=""> Favorites</a>
+                    <a href="#"> Favorites</a>
                 </li>
                 <li class="dropdown-item">
                     <input  id="search" type="search" placeholder="Search Your Music here ...."> 
@@ -88,15 +88,20 @@
     <main class="main-section-scrollbar">
         <header id="header-image-animation-container">
             <div class="image-frame" id="frame1"> 
-                <a href="#player">
-                    <img  class="image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img5.png" alt="dua Lipa" >
+                <a class="on-click-play-track" data-trackId="4">
+                    <img  class="image" src="./assets/image/Dancing With Your Ghost Li.jpg" alt="top song" >
                 </a> 
             </div>
-            <div class="image-frame" id="frame2"> <a href="#player"><img  class="image" src="https://th.bing.com/th/id/OIP.hiTieF-elHogfwir9lwrCAHaHa?w=180&h=180&c=7&r=0&o=5&pid=1.7"alt="John Legend" ></a> </div>
-            <div class="image-frame"  id="frame3"><a href="#player"><img  class="image" src="https://th.bing.com/th/id/OIP.MWSYxdRgeZOLKUHRPJjj0QHaHa?w=168&h=180&c=7&r=0&o=5&pid=1.7"alt="top song" ></a>   </div>
-            <div class="image-frame"  id="frame4"><a href="#player"><img  class="image" src="https://th.bing.com/th/id/OIP.-5Yy3PmuLahAaAqoFKzNzgHaKm?w=115&h=180&c=7&r=0&o=5&pid=1.7" alt="Zyan Malik" ></a> </div>
-            <div class="image-frame" id="frame5"><a href="#player"><img  class="image" src="https://th.bing.com/th/id/OIP.fGz7K4_lPlwxlR6NB2l8EgHaEK?w=318&h=180&c=7&r=0&o=5&pid=1.7"alt="dua Lipa" ></a>  </div>
-            <div class="image-frame" id="frame6"><a href="#player"><img  class="image" src="https://th.bing.com/th/id/OIP.MWSYxdRgeZOLKUHRPJjj0QHaHa?w=168&h=180&c=7&r=0&o=5&pid=1.7"alt="charlie Puth"></a> </div>
+            <div class="image-frame" id="frame2"> <a class="on-click-play-track" data-trackId="2">
+                <img  class="image" src="./assets/image/SIX FEET UNDER.jpg"alt="top song" ></a> </div>
+            <div class="image-frame"  id="frame3"><a class="on-click-play-track" data-trackId="3">
+                <img  class="image" src="./assets/image/Make You Mine Put Your Hand in.jpg"alt="top song" ></a>   </div>
+            <div class="image-frame"  id="frame4"><a class="on-click-play-track" data-trackId="0">
+                <img  class="image" src="./assets/image/all of me.jpg" alt="top song" ></a> </div>
+            <div class="image-frame" id="frame5"><a class="on-click-play-track" data-trackId="5">
+                <img  class="image" src="./assets/image/stay.jpg"alt="top song" ></a>  </div>
+            <div class="image-frame" id="frame6"><a class="on-click-play-track" data-trackId="">
+                <img  class="image" src=""alt="top song"></a> </div>
             <!-- <div class="frame">
                     <div class="cube">
                       
@@ -136,92 +141,92 @@
                 <div id="queue-body">
                     <article class="queue-body-item">
                         <span class="queue-body-item-numbering">01</span>
-                        <a class="queue-body-item-image-container" data-music-src="./assets/music/All Of Me.mp3">
-                            <img src="https://th.bing.com/th/id/OIP.hiTieF-elHogfwir9lwrCAHaHa?w=180&h=180&c=7&r=0&o=5&pid=1.7">
+                        <a class="queue-body-item-image-container on-click-play-track" data-trackId="0">
+                            <img src="./assets/image/all of me.jpg">
                         </a>
                         <div class="queue-body-item-details-container">
                             <p class="queue-body-item-name">All Of Me</p>
                             <p class="queue-body-item-artist">John Legend</p>
                         </div>
-                        <i class="fa-solid fa-heart like-btn"></i>
+                        <i class="fa-solid fa-heart like-btn" data-trackId="0"></i>
                     </article>
                     <article class="queue-body-item">
                         <span class="queue-body-item-numbering">02</span>
-                        <a class="queue-body-item-image-container" data-music-src="./assets/music/Astrid S  Hurts So Good.mp3">
-                            <img src="https://th.bing.com/th/id/OIP.fGz7K4_lPlwxlR6NB2l8EgHaEK?w=318&h=180&c=7&r=0&o=5&pid=1.7">
+                        <a class="queue-body-item-image-container on-click-play-track" data-trackId="1">
+                            <img src="./assets/image/Hurts So Good.jpg">
                         </a>
                         <div class="queue-body-item-details-container">
                             <p class="queue-body-item-name">Hurts So Good</p>
                             <p class="queue-body-item-artist">Astrid S </p>
                         </div>
-                        <i class="fa-solid fa-heart like-btn"></i>
+                        <i class="fa-solid fa-heart like-btn" data-trackId="1"></i>
                     </article>
                     <article class="queue-body-item">
                         <span class="queue-body-item-numbering">03</span>
-                        <a class="queue-body-item-image-container" href="#all-of-me">
-                            <img src="https://th.bing.com/th/id/OIP.fGz7K4_lPlwxlR6NB2l8EgHaEK?w=318&h=180&c=7&r=0&o=5&pid=1.7">
+                        <a class="queue-body-item-image-container on-click-play-track" data-trackId="2">
+                            <img src="./assets/image/SIX FEET UNDER.jpg">
                         </a>
                         <div class="queue-body-item-details-container">
-                            <p class="queue-body-item-name">All Of Me</p>
-                            <p class="queue-body-item-artist">John Legend</p>
+                            <p class="queue-body-item-name">SIX FEET UNDER</p>
+                            <p class="queue-body-item-artist">Billie Eilish </p>
                         </div>
-                        <i class="fa-solid fa-heart like-btn"></i>
+                        <i class="fa-solid fa-heart like-btn" data-trackId="2"></i>
                     </article>
                     <article class="queue-body-item">
                         <span class="queue-body-item-numbering">04</span>
-                        <a class="queue-body-item-image-container" href="#all-of-me">
-                            <img src="https://th.bing.com/th/id/OIP.hiTieF-elHogfwir9lwrCAHaHa?w=180&h=180&c=7&r=0&o=5&pid=1.7">
+                        <a class="queue-body-item-image-container on-click-play-track" data-trackId="3">
+                            <img src="./assets/image/Make You Mine Put Your Hand in.jpg">
                         </a>
                         <div class="queue-body-item-details-container">
-                            <p class="queue-body-item-name">All Of Me</p>
-                            <p class="queue-body-item-artist">John Legend</p>
+                            <p class="queue-body-item-name">Make You Mine </p>
+                            <p class="queue-body-item-artist">PUBLIC</p>
                         </div>
-                        <i class="fa-solid fa-heart like-btn"></i>
+                        <i class="fa-solid fa-heart like-btn" data-trackId="3"></i>
                     </article>
                     <article class="queue-body-item">
                         <span class="queue-body-item-numbering">05</span>
-                        <a class="queue-body-item-image-container" href="#all-of-me">
-                            <img src="https://th.bing.com/th/id/OIP.hiTieF-elHogfwir9lwrCAHaHa?w=180&h=180&c=7&r=0&o=5&pid=1.7">
+                        <a class="queue-body-item-image-container on-click-play-track" data-trackId="4">
+                            <img src="./assets/image/Dancing With Your Ghost Li.jpg">
                         </a>
                         <div class="queue-body-item-details-container">
-                            <p class="queue-body-item-name">All Of Me</p>
-                            <p class="queue-body-item-artist">John Legend</p>
+                            <p class="queue-body-item-name">Dancing With Your Ghost </p>
+                            <p class="queue-body-item-artist">Sasha Sloan</p>
                         </div>
-                        <i class="fa-solid fa-heart like-btn"></i>
+                        <i class="fa-solid fa-heart like-btn" data-trackId="4"></i>
                     </article>
                     <article class="queue-body-item">
                         <span class="queue-body-item-numbering">06</span>
-                        <a class="queue-body-item-image-container" href="#all-of-me">
-                            <img src="https://th.bing.com/th/id/OIP.hiTieF-elHogfwir9lwrCAHaHa?w=180&h=180&c=7&r=0&o=5&pid=1.7">
+                        <a class="queue-body-item-image-container on-click-play-track" data-trackId=" 5">
+                            <img src="./assets/image/stay.jpg">
                         </a>
                         <div class="queue-body-item-details-container">
-                            <p class="queue-body-item-name">All Of Me</p>
-                            <p class="queue-body-item-artist">John Legend</p>
+                            <p class="queue-body-item-name">STAY </p>
+                            <p class="queue-body-item-artist">The Kid LAROI Justin Bieber</p>
                         </div>
-                        <i class="fa-solid fa-heart like-btn"></i>
+                        <i class="fa-solid fa-heart like-btn" data-trackId="5"></i>
                     </article>
-                    <article class="queue-body-item">
+                    <!-- <article class="queue-body-item">
                         <span class="queue-body-item-numbering">07</span>
-                        <a class="queue-body-item-image-container" href="#all-of-me">
+                        <a class="queue-body-item-image-container on-click-play-track" data-trackId="  SIX FEET UNDER Lyrics.mp3">
                             <img src="https://th.bing.com/th/id/OIP.hiTieF-elHogfwir9lwrCAHaHa?w=180&h=180&c=7&r=0&o=5&pid=1.7">
                         </a>
                         <div class="queue-body-item-details-container">
                             <p class="queue-body-item-name">All Of Me</p>
                             <p class="queue-body-item-artist">John Legend</p>
                         </div>
-                        <i class="fa-solid fa-heart like-btn"></i>
+                        <i class="fa-solid fa-heart like-btn" data-trackId="0"></i>
                     </article>
                     <article class="queue-body-item">
                         <span class="queue-body-item-numbering">08</span>
-                        <a class="queue-body-item-image-container" href="#all-of-me">
+                        <a class="queue-body-item-image-container on-click-play-track" data-trackId="  comethru Official Video.mp3">
                             <img src="https://th.bing.com/th/id/OIP.hiTieF-elHogfwir9lwrCAHaHa?w=180&h=180&c=7&r=0&o=5&pid=1.7">
                         </a>
                         <div class="queue-body-item-details-container">
-                            <p class="queue-body-item-name">All Of Me</p>
-                            <p class="queue-body-item-artist">John Legend</p>
+                            <p class="queue-body-item-name">come thru</p>
+                            <p class="queue-body-item-artist">Jeremy Zucker</p>
                         </div>
-                        <i class="fa-solid fa-heart like-btn"></i>
-                    </article>
+                        <i class="fa-solid fa-heart like-btn" data-trackId="0"></i>
+                    </article> -->
     
                 </div>
             </section>
@@ -231,38 +236,38 @@
         <section id="latest-release" >
             <h2 class="section-title">Latest release</h2>
             <div  class="release-song-body section-scrollbar">
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img4.webp" alt="music pic">
+                <a class="on-click-play-track" data-trackId="3"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/Make You Mine Put Your Hand in.jpg" alt="music pic">
                 </a>
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img4.webp" alt="music pic">
+                <a class="on-click-play-track" data-trackId="4"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/Dancing With Your Ghost Li.jpg" alt="music pic">
                 </a>
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img4.webp" alt="music pic">
+                <a class="on-click-play-track" data-trackId="0"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/all of me.jpg" alt="music pic">
                 </a>
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img3.jpg" alt="music pic">
+                <a class="on-click-play-track" data-trackId="1"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/Hurts So Good.jpg" alt="music pic">
                 </a>
                         
 
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img5.png" alt="music pic">
+                <a class="on-click-play-track" data-trackId="2"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/SIX FEET UNDER.jpg" alt="music pic">
                 </a>
         
 
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img4.webp" alt="music pic">
+                <a class="on-click-play-track" data-trackId="5"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/stay.jpg" alt="music pic">
                 </a>
         
 
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img3.jpg" alt="music pic">
+                <!-- <a class="on-click-play-track" data-trackId=""  href="#player" target="_parent">
+                    <img class="release-song-image" src="" alt="music pic">
                 </a>
         
 
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img5.png" alt="music pic">
-                </a>
+                <a class="on-click-play-track" data-trackId=""  href="#player" target="_parent">
+                    <img class="release-song-image" src="" alt="music pic">
+                </a> -->
 
                 <div class="release-song-image" style="margin-top: 30px;" >
                     <p  style="font-size: 1.4rem;color: white;">VIEW MORE</p>
@@ -279,74 +284,62 @@
             <div id="popular-artist-body" class="section-scrollbar">
                 <div class="popular-artist-body-item">
                     <div class="artist-photo">
-                        <!-- <a href="artist1.html" target="_parent">
-                            <img src="https://th.bing.com/th/id/OIP.l8RChrosjC3Bb1QO3ebS4QHaEK?w=289&h=180&c=7&r=0&o=5&pid=1.7" alt="music pic">
-                        </a> -->
-                        <!-- for bg image, as artist profile image -->
-                        <div id="artist1"></div>
+                        <a href="#header-image-animation-container" target="_parent">
+                            <img class="artist"  src="./assets/image/Astrid S.jpg" alt="music pic">
+                        </a>
                     </div>
                     <div class="artist-name">
-                        <span class="artist-name">Charlie Puth</span>
+                        <span class="artist-name">Astrid S</span>
                     </div>
                 </div>
                 <div class="popular-artist-body-item">
                     <div class="artist-photo">
-                        <!-- <a href="artist1.html" target="_parent">
-                            <img src="https://th.bing.com/th/id/OIP.-FETJaAKqa-WnUmCdpg0LQHaLH?w=186&h=279&c=7&r=0&o=5&pid=1.7" alt="music pic">
-                        </a> -->
-                         <!-- for bg image, as artist profile image -->
-                         <div id="artist2"></div>
+                        <a href="#header-image-animation-container" target="_parent">
+                            <img class="artist" src="./assets/image/Billie Elilish.jpg" alt="music pic">
+                        </a>
                     </div>
                     <div class="artist-name">
-                        <span class="artist-name">Seelena Gomez</span>
+                        <span class="artist-name">Billie Elilish</span>
                     </div>
                 </div>
                 <div class="popular-artist-body-item">
                     <div class="artist-photo">
-                        <!-- <a href="artist1.html" target="_parent">
-                            <img src="https://th.bing.com/th/id/OIP.NN613DpZ5xQDu2o7DTciwAHaJM?w=138&h=180&c=7&r=0&o=5&pid=1.7" alt="music pic">
-                        </a> -->
-                         <!-- for bg image, as artist profile image -->
-                         <div id="artist3"></div>
+                        <a href="#header-image-animation-container" target="_parent">
+                            <img class="artist" src="./assets/image/justin  and kid.jpg" alt="music pic">
+                        </a>
                     </div>
                     <div class="artist-name">
-                        <span class="artist-name">Shawn Mendes</span>
+                        <span class="artist-name">justin  and kid</span>
                     </div>
                 </div>
                 <div class="popular-artist-body-item">
                 <div class="artist-photo">
-                        <!-- <a href="artist1.html" target="_parent">
-                            <img src="https://th.bing.com/th/id/OIP.9Pfgc-13faD3SIz8AOPKUgHaDt?w=349&h=174&c=7&r=0&o=5&pid=1.7" alt="music pic">
-                        </a> -->
-                        <!-- for bg image, as artist profile image -->
-                        <div id="artist4"></div>
+                        <a href="#header-image-animation-container" target="_parent">
+                            <img class="artist" src="./assets/image/sasha sloan.jpg" alt="music pic">
+                        </a>
                 </div>
                 <div class="artist-name">
-                        <span class="artist-name">Ed Sheeran</span>
+                        <span class="artist-name">Sasha Sloan</span>
                 </div>
                 </div>
                 <div class="popular-artist-body-item">
                     <div class="artist-photo">
-                        <!-- <a href="artist1.html" target="_parent">
-                            <img src="https://th.bing.com/th/id/OIP.B-RUIGZWAhen5lH5iCJSHQHaO0?w=116&h=180&c=7&r=0&o=5&pid=1.7" alt="music pic">
-                        </a> -->
-                         <!-- for bg image, as artist profile image -->
-                         <div id="artist5"></div>
+                        <a href="#header-image-animation-container" target="_parent">
+                            <img class="artist" src="./assets/image/PUBLIC.jpg" alt="music pic">
+                        </a>
                     </div>
                     <div class="artist-name">
-                        <span class="artist-name">Anne Marie</span>
+                        <span class="artist-name">PUBLIC</span>
                     </div>
                 </div>
                 <div class="popular-artist-body-item">
                     <div class="artist-photo">
-                        <!-- <a href="artist1.html" target="_parent">
-                            <img src="https://th.bing.com/th/id/OIP.7L7O_psOyiQ2UVOiK1U1jQHaI-?w=130&h=180&c=7&r=0&o=5&pid=1.7" alt="music pic">
-                        </a> -->
-                         <!-- for bg image, as artist profile image -->
-                         <div id="artist6"></div>
+                        <a href="#header-image-animation-container" target="_parent">
+                            <img class="artist" src="./assets/image/john legend.jpg " alt="music pic">
+                        </a>
                     </div>
                     <div class="artist-name">
-                        <span class="artist-name">Harry Styles</span>
+                        <span class="artist-name">john legend</span>
                     </div>
                 </div>
                 <div class="popular-artist-body-item" style="margin-top: 30px;" >
@@ -462,39 +455,31 @@
           <!-- latest release section -->
           <section id="latest-release" >
             <h2 class="section-title">Latest release English Songs</h2>
-            <div  class="release-song-body section-scrollbar">
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img4.webp" alt="music pic">
+            <div  class="release-song-body">
+                <a class="on-click-play-track" data-trackId="3"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/Make You Mine Put Your Hand in.jpg" alt="music pic">
                 </a>
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img4.webp" alt="music pic">
+                <a class="on-click-play-track" data-trackId="4"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/Dancing With Your Ghost Li.jpg" alt="music pic">
                 </a>
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img4.webp" alt="music pic">
+                <a class="on-click-play-track" data-trackId="0"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/all of me.jpg" alt="music pic">
                 </a>
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img3.jpg" alt="music pic">
+                <a class="on-click-play-track" data-trackId="1"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/Hurts So Good.jpg" alt="music pic">
                 </a>
                         
 
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img5.png" alt="music pic">
+                <a class="on-click-play-track" data-trackId="2"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/SIX FEET UNDER.jpg" alt="music pic">
                 </a>
         
 
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img4.webp" alt="music pic">
+                <a class="on-click-play-track" data-trackId="5"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/stay.jpg" alt="music pic">
                 </a>
         
 
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img3.jpg" alt="music pic">
-                </a>
-        
-
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img5.png" alt="music pic">
-                </a>
                 <div class="release-song-image" style="margin-top: 30px;" >
                     <p  style="font-size: 1.4rem;color: white;">VIEW MORE</p>
                    <p style="text-align: center;padding: 10px 0;"> <i  class="fa fa-chevron-circle-down" style="font-size: xx-large;color: white;"></i></p>
@@ -506,38 +491,30 @@
           <section id="latest-release" >
             <h2 class="section-title">Latest release Hindi Songs</h2>
             <div  class="release-song-body section-scrollbar">
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img4.webp" alt="music pic">
+                <a class="on-click-play-track" data-trackId="3"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/Make You Mine Put Your Hand in.jpg" alt="music pic">
                 </a>
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img4.webp" alt="music pic">
+                <a class="on-click-play-track" data-trackId="4"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/Dancing With Your Ghost Li.jpg" alt="music pic">
                 </a>
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img4.webp" alt="music pic">
+                <a class="on-click-play-track" data-trackId="0"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/all of me.jpg" alt="music pic">
                 </a>
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img3.jpg" alt="music pic">
+                <a class="on-click-play-track" data-trackId="1"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/Hurts So Good.jpg" alt="music pic">
                 </a>
                         
 
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img5.png" alt="music pic">
+                <a class="on-click-play-track" data-trackId="2"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/SIX FEET UNDER.jpg" alt="music pic">
                 </a>
         
 
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img4.webp" alt="music pic">
+                <a class="on-click-play-track" data-trackId="5"  href="#player" target="_parent">
+                    <img class="release-song-image" src="./assets/image/stay.jpg" alt="music pic">
                 </a>
         
 
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img3.jpg" alt="music pic">
-                </a>
-        
-
-                <a  href="#player" target="_parent">
-                    <img class="release-song-image" src="https://music-player-coding-ninjas.vercel.app/assets/carousel/img5.png" alt="music pic">
-                </a>
                 <div class="release-song-image" style="margin-top: 30px;" >
                     <p  style="font-size: 1.4rem;color: white;">VIEW MORE</p>
                    <p style="text-align: center;padding: 10px 0;"> <i  class="fa fa-chevron-circle-down" style="font-size: xx-large;color: white;"></i></p>
