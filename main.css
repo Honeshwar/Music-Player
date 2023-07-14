@@ -3,19 +3,34 @@
     padding: 0;
 }
 body{
-    background:linear-gradient(to right,rgb(11, 11, 139),rgb(72, 2, 72));
+    height: 100vh;
+    width: 100vw;
+    /* background:linear-gradient(to right,rgb(11, 11, 139),rgb(72, 2, 72)); */
+    /* background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 5%,#430878 40%, #2B86C5 100%);
+
+
+    background-image: linear-gradient(225deg,rgb(0, 0, 255) 0%,rgb(58, 61, 76) 100%); */
+
+    
+    background-color: rgb(12, 17, 38);
+
 }
+
+/* nav,main,#footer{display: none;} */
 
 /* -----------------navbar------------------------ */
 nav{
     /* border: solid; */
     width: 100vw;
     height: 12vh;
-    background:linear-gradient(to right,rgb(2, 6, 77),rgb(152, 7, 133));
+    /* background:linear-gradient(to right,rgb(15, 17, 38),rgb(15, 17,38)); */
     
     
 }
-.nav-bar-items{
+.navbar-items{
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -26,7 +41,7 @@ nav{
    padding: 0px;
 }
 
-.nav-bar-items a{
+.navbar-items a{
     text-decoration: none;
     color: rgb(249, 252, 255);
     
@@ -35,7 +50,7 @@ nav{
     list-style: none;
 }
 
-.brand-logo-name-fav{
+.brand-logo{
     /* border: solid wheat; */
     display: flex;
 
@@ -85,7 +100,7 @@ margin-right: px;
     /* border: solid; */
 
     width: 100%;
-    height: ;
+    /* height: ; */
     padding: 10px;
     border-top: solid #ffffff;
     background: #44448a;
@@ -237,6 +252,11 @@ main{
     /* border:solid yellow; */
 
   
+}
+
+/* new add ,hyperlink through target*/
+#navbar:target #signup-form{
+    display: none;
 }
 
 /* -------------_____________Header image  animation container and animation_____________------- */
@@ -1269,3 +1289,8 @@ hr{
 
 
 
+
+
+#abc:target{
+    display: none;
+}
