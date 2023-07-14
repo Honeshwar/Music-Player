@@ -1,6 +1,6 @@
 //fetch all element from DOM that we will manipulate
 const trackImg = document.querySelector("#music img") ;//use to update artist profile image
-const songName= document.querySelector("#details h2") ;//use to update song name
+const songName= document.querySelector("#details h4") ;//use to update song name
 const artistName= document.querySelector("#details p") ;//use to update artist name
 const shuffle= document.querySelector("#control i:nth-of-type(1)") ;//use to update control
 const backward= document.querySelector("#control i:nth-of-type(2)") ;//use to update control

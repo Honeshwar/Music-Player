@@ -6,9 +6,9 @@
 
 :root{
 
-    --music-poster-width:150px;
-    --music-poster-height:100px;
-    --artist-image-size:150px;
+    --music-poster-width:100px;
+    --music-poster-height:70px;
+    --artist-image-size:100px;
      
     
 }
@@ -62,9 +62,9 @@ main{
 }
 aside{ 
     position:fixed;
-    top:100px;
+    top:50px;
     right:30px;
-    width:600px ;
+    width:500px ;
     height: 80%;
  
 }
@@ -92,7 +92,7 @@ aside{
 
 
 .logo{
-    width: 80px;
+    width: 50px;
     border-radius: 100%;
     box-shadow: 0 0 2px 2px;
     animation: heartBeat 1s ease-in-out 0s infinite alternate ;
@@ -109,7 +109,7 @@ aside{
 
 #brand-name{
     padding: 10px;
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: bolder;
     text-shadow: 0 0 2px white;
     display: flex;
@@ -133,14 +133,12 @@ aside{
     display: flex;
     justify-content: space-between;
     list-style: none;
-    /* border: solid; */
 
 }
 .dropdown-item{
     width: 10%;
     padding: 10px 40px;
-    /* border: solid; */
-    font-size: large;
+    font-size: medium;
     font-family:  sans-serif;
 
     /* use to center an element */
@@ -155,9 +153,9 @@ aside{
     width: 45%;
 }
 .dropdown-item:nth-child(2) input{
-    padding: 10px;
-    padding-left:50px;
-    font-size: 1.2rem;
+    padding: 5px;
+    padding-left:30px;
+    font-size: .9rem;
     border-radius: 12px;
     width:100%;
     min-width: 100px;
@@ -168,7 +166,7 @@ aside{
 }
 .dropdown-item:nth-child(2) i{
    position: absolute;
-   left: 60px; 
+   left: 50px; 
    color: rgb(8, 8, 8);
 }
 
@@ -286,6 +284,7 @@ aside{
 /* dropdown-item */
 .dropdown-item:not(.dropdown-item:nth-child(2)){
     animation: heartBeat 1s ease-in-out 0s infinite alternate ;
+    font-size: .9rem;
 }
 
 @keyframes heartBeat{
@@ -298,11 +297,10 @@ aside{
 }
 /********************* Queue section style ****************************************/
 #queue{
-width: 100%;
-height:100%;
-padding: 10px;
-
-border-radius: 20px;
+    width: 100%;
+    height:100%;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 /* ***** queue header ******** */
@@ -317,7 +315,7 @@ border-radius: 20px;
 }
 #queue-title-and-button span,#queue-button{
     padding: 10px;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-family: sans-serif;
     font-family: cursive;
     text-shadow: 0  0 2px black;
@@ -328,7 +326,7 @@ border-radius: 20px;
 }
 #queue-dropdown{
     display: none;
-    width:200px;
+    width:150px;
     height:fit-content;
     float: right;
 
@@ -347,22 +345,21 @@ border-radius: 20px;
     height: 100%;
     list-style-type: none;
     background-color: rgb(149, 193, 231);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px;
     
 }
 .queue-dropdown-item a{
     text-decoration-line: none;
-    font-size: 1rem;
-    font-family: sans-serif;
+    font-size: .6rem;
+    font-family: cursive;
     font-weight: 700;
     text-align: center;
 
     /* for to style width we make inline element inline-block */
     display: inline-block;
     width: 100%;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 5px;
     border-bottom: 2px solid gray;
     background-color: aliceblue;
     margin-bottom: 10px;
@@ -384,7 +381,7 @@ border-radius: 20px;
 #queue-body{
     width: 100%;
     height: 85%;
-    padding: 10px;
+    padding-inline: 10px;
     overflow-y: auto;
     padding-right: 30px;
 }
@@ -395,7 +392,7 @@ border-radius: 20px;
     background-color: #051749;
     
     }
-#queue-body::-webkit-scrollbar-track{
+/* #queue-body::-webkit-scrollbar-track{
     width: 10px;
     background-color: #c8cee0;
     border-radius:10px ;
@@ -409,13 +406,13 @@ border-radius: 20px;
     width: 10px;
     background-color: #b5b7bd;
     border-radius:2px ;display: none;
+     
+}*/
     
-}
-    
-
+/* *** queue body *** */
 
 .queue-body-item{
-    padding:20px 10px;
+    padding:15px 20px;
     display: flex;
     align-items: center;
  
@@ -426,17 +423,17 @@ border-radius: 20px;
     
     background-color: #0e1424;
     margin-block:20px;
-    font-size: 1.52rem;
 }
 .queue-body-item-numbering{
-    padding: 0  0 0 10px;
+    font-size: 1.2rem;
+
 }
 .queue-body-item-image-container{
-    padding: 0 50px;
+    padding: 0 30px 0 40px;
 }
 .queue-body-item-image-container img{
-    width: 100px;
-    height: 80px;
+    width: 70px;
+    height: 60px;
     border-radius: 10px
 }
 .queue-body-item-details-container{
@@ -444,13 +441,13 @@ border-radius: 20px;
 }
 .queue-body-item-details-container p{
     padding:5px 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .like-btn{
     padding: 0 10px;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     position: absolute;
-    top:45px;
+    top:35px;
     right: 30px;
 }
 .like-btn:hover{
@@ -460,17 +457,16 @@ border-radius: 20px;
 
 /********************* header section style ****************************************/
 #header-image-animation-container{
-    width: 75%;
-    min-height:500px;
+    width: 63%;
+    min-height:350px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 .image-frame{
-    width: 350px;
-    height: 350px;
+    width: 200px;
+    height: 200px;
     position: absolute; 
     border-radius: 10px;
     
@@ -493,60 +489,73 @@ border-radius: 20px;
 }
 
 #frame1{ z-index: 6; transform: scale(1.2); perspective: -399999999999999;}
-#frame2{ z-index: 5; left: 350px; 
+#frame2{ z-index: 5; left: 200px; 
     transform: scale(1.1);}
-#frame3{ z-index: 4;  left: 150px;  }
-#frame4{ z-index: 3; right: 350px;  transform:  scale(1.1);;}
-#frame5{ 
-    z-index: 2; right:200px; 
-    perspective: 399999999999999; 
+#frame3{ z-index: 4;  left: 100px;  }
+#frame4{ z-index: 3; right: 200px;  transform:  scale(1.1);;}
+#frame5{ z-index: 2; right:100px; perspective: 399999999999999; 
 }
-#frame6{
-    z-index: 2;
-}
+#frame6{ z-index: 2;}
 
 
 /********************* latest release section style ****************************************/
 /* common */
 main section{
-    padding-left:100px; 
-    width: 70%;
-    height:fit-content;
-
-    margin-top: 30px;
-}
-section{
+    padding-left:50px; 
     width: 60%;
-}
-section h2{
-    color: white;
-    padding: 30px;
-    font-size: 2.4rem;
-    font-family: monospace;
+    height:fit-content;
+    margin-top: 30px;
+    /* border: solid; */
 }
 
 .section-title{
     color: white;
     padding: 30px;
-    font-size: 2.4rem;
+    font-size: 1.4rem;
     font-family: monospace;
+}
+#latest-release{
+    margin: 0;
 }
 .release-song-body{
     display: flex;
     flex-wrap: wrap;
 }
 .release-song-image{
-    width: 300px;
-    width:var(--music-poster-width,200px);
-    height: var(--music-poster-height,200px);
+    width:var(--music-poster-width,150px);
+    height: var(--music-poster-height,150px);
     border-radius: 10px;
-    margin-inline:30px ;
+    margin-inline:15px ;
     margin-bottom:20px ;
 
 }
 
+.view-more-container{
+   width: fit-content;
+   height: var(--music-poster-height,150px);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   margin-inline:35px ;
+    margin-bottom:20px ;
+}
+.view-more-container i{
+    font-size: 1.3rem;
+}
+.view-more-container p{
+    font-size: .9rem;
+    padding-right: 8px;
+   text-transform: lowercase;
+}
 
 /********************* popular artist section style ****************************************/
+.popular-artist-title{
+    color: white;
+    padding: 30px;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+}
 #popular-artist-body{
     display: flex;
     align-items: center;
@@ -560,8 +569,8 @@ section h2{
 .artist-photo{
     width: var(--artist-image-size,150px);
    height: var(--artist-image-size,150px);
-   padding: 10px;
-   box-shadow: inset 0  0 2px 5px rgb(156, 153, 153);
+   padding: 8px;
+   box-shadow: inset 0  0 2px 3px rgb(156, 153, 153);
    border-radius: 100%;
   
 }
@@ -576,7 +585,7 @@ section h2{
     text-align: center;
     font-family: 'Courier New';
     font-weight: 900;
-    font-size: 18px;
+    font-size: .9rem;
     text-transform: capitalize;
 }
 
@@ -585,7 +594,7 @@ section h2{
 #radio-station{
     width: 86.6%;
     width: 65%;
-    margin: 10px;
+    /* margin: 10px; */
 
 }
 #radio-channels-container{
@@ -593,8 +602,8 @@ section h2{
     height:fit-content;
     display: flex;
     align-items: center;
-  flex-wrap: wrap;
-    padding: 20px;
+    flex-wrap: wrap;
+    /* padding: 20px; */
    
 }
 .radio-station-items-container{
@@ -602,7 +611,7 @@ section h2{
     border-radius: 100%;
     width: 100px;
     margin-inline: 20px;
-    padding: 10px 90px;
+    padding: 10px 0px;
 
 
     display: flex;
@@ -618,23 +627,22 @@ section h2{
 .radio-station-items-container span{
     color: white;
     position: absolute;
-    z-index: 2;
-    font-size: x-large;
+    z-index: 1;
+    font-size: 1rem;
     font-family: cursive;
     text-shadow: 0 0 30px black;
 }
 
 .radio-channel-logo{ 
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
     border-radius: 100%;
-
     opacity: .9;
 
   
 }
 .radio-channel-logo:hover{ 
-    transform: scale(1.2);
+    transform: scale(1.19);
     opacity: 1;
     transition: all .3s ease-in-out;
 
@@ -655,8 +663,11 @@ section h2{
 #genre-body{
     display: flex;
     flex-wrap: wrap;
-    overflow: hidden;
+    /* overflow: hidden; */
     
+}
+#genre-body .view-more-container{
+    padding-left: 20px;
 }
 .genre-image-container{
     border-radius: 20px;
@@ -671,22 +682,23 @@ section h2{
     color: #000207;
 }
 .genre-image-container:hover{
-transform:scale(1.03)  ;
+transform:scale(1.13)  ;
 transition: transform .3s ease-in-out;
 
 }
 .genre-image-container  img{
-    width: 200px;
-    height:150px;
-    border-radius: 30px;
+    width: 160px;
+    height:100px;
+    border-radius: 10px;
     box-shadow:  0 0 0px 1px rgb(63, 61, 61);
 }
 
 .genre-image-container  span{
     position: absolute;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding-bottom: 30px;
     color: white;
+    text-shadow: 0 0 5px black;
 } 
 
  
@@ -718,34 +730,34 @@ transition: transform .3s ease-in-out;
 
 
 /****************** Footer *******************/
-#footer{
-    width: 60%;
-    margin-top: -20px;
-}
-
-main footer{
+main #footer{
+    width: 50%;
+    margin-top: 20px;
     height:300px;
     padding: 20px;
     text-align: start;
-    margin-left:130px;
-    margin-top: 20px;
-    background-color: cadetblue;
-    font-size: large;
+    margin-left: 80px;
+    margin-bottom: 30px;
+    /* background-color: cadetblue; */
     color: white;
-    letter-spacing: 3px;
+    border-radius: 10px;
 }
 #footer p{
     color: white;
     text-align: center;
     padding: 5px;
-    font-family: 'Trebuchet MS'
+    font-family: sans-serif;
+    font-size: 1rem;
+    text-shadow: 0 0 10px black;
+
 }
 
 
 /* ********************** Player ******************* */
 #player{
+    border-top: double rgba(255, 251, 251, 0.402);
     width: 100%;
-    height: 120px;
+    height: 90px;
     background-color: rgb(39, 46, 61);
     position: fixed;
     left: 0;
@@ -756,6 +768,7 @@ main footer{
 
     color: white;
 }
+/* 3 container */
 #music,#controls,#more-controls{
     width: 33.33%;
     height: 100%;
@@ -765,31 +778,43 @@ main footer{
     
 
 }
+/* image style */
 #music img{
-    width: 100px;
-    height: 80px;
+    width: 80px;
+    height: 60px;
     border-radius: 10px;
-    margin-right:30px;
+    margin-right:10px;
 }
+/* details */
 #details{
-    height: 70%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     margin-right:30px;
-    justify-content: space-evenly;
+    justify-content: center;
+
+}
+#details h4{
+    max-width: 150px;
+    height: 20px;
+    overflow: hidden;
 }
 #details p{
-    font-size: .8em;
+    padding-top: 8px;
+    font-size: .6em;
     font-family: cursive;
     letter-spacing: 2px;
 }
+/* #player i{
+    font-size: 1.3rem;
+} */
 #music i{
     margin-right:30px;
-    font-size: 1.9rem;
+    font-size: 1.2rem;
 
 }
 #music i:hover{
-    color: rgba(255, 40, 2, 0.826);
+    color: rgb(255, 38, 0);
     transform: scale(1.2);
 }
 #controls{
@@ -803,7 +828,7 @@ main footer{
     margin: auto;
    display: flex;
    justify-content: space-evenly;
-   font-size: 1.8rem;
+   font-size: 1.5rem;
 
 }
 #control i:hover{
@@ -819,7 +844,7 @@ align-items: center;
 }
 
 #more-controls > i,#more-controls div{
-    font-size: 2rem;
+    font-size: 1.3rem;
     padding: 20px;
 }
 #more-controls i:hover{
@@ -827,11 +852,12 @@ align-items: center;
     transform: scale(1.09);
 }
 
+/* progress bar styling */
  
 #progress{ 
     margin: 20px 0;
     width:70%;
-    height: 10px;
+    height: 8px;
     background-color: rgb(255, 254, 253);
 
     border-radius: 15px;
@@ -843,88 +869,27 @@ align-items: center;
     width:100px;
     height: 100%;
     border-radius: 15px;
-    background-color:rgb(7, 130, 175);
+    background-color:rgb(0, 115, 255);
     position: relative;
     left:.5px
 }
 #progress #bar::after{
     content: '';
-    background-color: rgb(8, 171, 196);
+    background-color: rgb(0, 115, 255);
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    box-shadow: inset 0 0 2px 2px ;
+    box-shadow: inset 0 0 2px 2px rgb(4, 86, 186);
     position: absolute;
     right: -10px;
-    bottom: -4.4px;
+    bottom: -5px;
 }
 
 
 
-@media screen and (max-width:700px) {
-    /********************* navbar ****************************************/
-    #navbar{
-        width: 100%;
-        padding: 10px;
-        display: block;
-        justify-content: space-between;
-        align-items: center;
 
-        position: relative;
-    }
-    /********************* dropdown list ****************************************/
-    #dropdown-list-container,#signUp-form{
-        display: none;
-    }
-    #dropdown-list-container:target{
-        display: block;
-        width: 100%;
-    }
-    #dropdown-menu{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center
-    }
-    .dropdown-item{
-        width: 100%;
-        padding-block: 20px;
-    }
-    .dropdown-item:nth-child(2) input{
-        width: 80%;
-        padding: 12px;
-        padding-left: 50px;
-        }
-        
-    .dropdown-item:nth-child(2) i{
-        position: absolute;
-        left: 110px;
-    }
-    #close-dropdown{
-        display: block;
-        position: absolute;
-        top:30px; 
-        right: 10px;
-
-        /* close button i put above of hamburg so on , hamburg behave toggle on/off */
-        opacity: 0;
-    }
-        
     
-    /********************* hamburg ****************************************/
-        #hamburg{
-            display: block;
-            font-size: 3rem;
-            position: absolute;
-            top:30px;
-            right: 10px;
-        }
-        #hamburg a{
-            color: white;
-        }
-    }
-    
-    @media screen and (max-width:1550px) {
+     /* @media screen and (max-width:1550px) {
       
         aside{
             width:500px;
@@ -934,7 +899,7 @@ align-items: center;
         }
         .like-btn{
             padding: 0 10px;
-            font-size: 2.2rem;
+            font-size: 1.5rem;
             position: absolute;
             top:43px;
             right: 30px;
@@ -958,7 +923,7 @@ align-items: center;
             font-size: 1.2rem;
         }
     
-    }
+    }  */
     
 
     @media screen and (max-width:1250px) {
@@ -1014,6 +979,68 @@ align-items: center;
         }
     }
     
+    @media screen and (max-width:700px) {
+        /********************* navbar ****************************************/
+        #navbar{
+            width: 100%;
+            padding: 10px;
+            display: block;
+            justify-content: space-between;
+            align-items: center;
+    
+            position: relative;
+        }
+        /********************* dropdown list ****************************************/
+        #dropdown-list-container,#signUp-form{
+            display: none;
+        }
+        #dropdown-list-container:target{
+            display: block;
+            width: 100%;
+        }
+        #dropdown-menu{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center
+        }
+        .dropdown-item{
+            width: 100%;
+            padding-block: 20px;
+        }
+        .dropdown-item:nth-child(2) input{
+            width: 80%;
+            padding: 12px;
+            padding-left: 50px;
+            }
+            
+        .dropdown-item:nth-child(2) i{
+            position: absolute;
+            left: 110px;
+        }
+        #close-dropdown{
+            display: block;
+            position: absolute;
+            top:30px; 
+            right: 10px;
+    
+            /* close button i put above of hamburg so on , hamburg behave toggle on/off */
+            opacity: 0;
+        }
+            
+        
+        /********************* hamburg ****************************************/
+            #hamburg{
+                display: block;
+                font-size: 3rem;
+                position: absolute;
+                top:30px;
+                right: 10px;
+            }
+            #hamburg a{
+                color: white;
+            }
+    }
     
    
 
