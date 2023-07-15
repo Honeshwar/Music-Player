@@ -72,7 +72,7 @@ aside{
 /* navbar */
 #navbar{
     width: 100%;
-    padding: 10px;
+    padding-inline: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -175,6 +175,10 @@ aside{
     text-decoration-line:none;
     
 }
+
+.dropdown-item:nth-child(3) i{
+   font-size: large;
+ }
 #close-dropdown{
     display: none;
     padding: 10px 0;
@@ -185,6 +189,31 @@ aside{
    
 
 }
+
+#profile{
+    padding-top: 5px;
+    padding-right: 20px;
+}
+#profile a{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: right;
+}
+#profile img{
+    width: 50px;
+    /* height: 100%; */
+    border: solid white;
+    border-radius: 100%;
+}
+#profile a span{
+    /* display: none; */
+    padding: 5px;
+    font-size: small;
+    font-family: cursive;
+}
+a{cursor: pointer;}
 
 /************************ sign up form style ********************/
 #signUp-form{
@@ -282,7 +311,7 @@ aside{
 }
 
 /* dropdown-item */
-.dropdown-item:not(.dropdown-item:nth-child(2)){
+.dropdown-item:not(.dropdown-item:nth-child(2) , .dropdown-item:nth-child(4)){
     animation: heartBeat 1s ease-in-out 0s infinite alternate ;
     font-size: .9rem;
 }
