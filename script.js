@@ -330,7 +330,54 @@ shuffle.style.color="aqua";
 
 
 
-/**
+// play track on click
+
+const PlayTracksOnClick = document.getElementsByClassName("on-click-play-track");
+const favorites = document.querySelectorAll('.queue-body-item i');
+
+for (const element of PlayTracksOnClick) {
+    element.addEventListener('click',function () {
+        const id = element.getAttribute('data-trackId');
+        audio.src = tracks[id].trackSrc;
+
+        console.log(tracks[id]);
+
+        trackImg.src=tracks[id].bannerSrc;
+        songName.innerText=tracks[id].songName;
+        artistName.innerText=tracks[id].artistName;
+    
+        //when directly click on next with click on play btn
+        //user click after pause music,checks
+         if(play.classList[1]==='fa-play-circle-o'){
+            play.classList.remove('fa-play-circle-o');
+            play.classList.add('fa-pause-circle-o');
+        }
+        audio.play();
+        
+    });
+}
+
+// favorite btn script
+for (const favorite of favorites) {
+    favorite.addEventListener('click',function () {
+        const trackId =parseInt( favorite.getAttribute('data-trackId'));
+       
+        favorite.classList.toggle('like');
+        tracks = tracks.map((track,index)=>{
+            if(trackId === index){
+                track.isFavorite = !track.isFavorite;
+            }
+            console.log(track);
+            return track;
+        });
+        console.log(tracks);
+
+        
+    });
+}
+
+
+/** Some POints to create things
 
 1.use progress for mousemove ,
  pointer in progress slider is important with  it help we will move in forward with mouse because it is in 5px right from progress
@@ -375,11 +422,10 @@ progressB.onclick=function(e){
     0s=( progresswidth=0/totalwidth )seconds
     
 }
-*/
 
 
 //4 steps to create player
-/**
+
  * 1. create audio element
  * 2. using audio obj time manage
  * 3. first create an func convert time/duration if track in min:sec
@@ -387,50 +433,3 @@ progressB.onclick=function(e){
   
     draggable slider bar is an functionality
 */
-
-
-// new
-
-const PlayTracksOnClick = document.getElementsByClassName("on-click-play-track");
-const favorites = document.querySelectorAll('.queue-body-item i');
-
-for (const element of PlayTracksOnClick) {
-    element.addEventListener('click',function () {
-        const id = element.getAttribute('data-trackId');
-        audio.src = tracks[id].trackSrc;
-
-        console.log(tracks[id]);
-
-        trackImg.src=tracks[id].bannerSrc;
-        songName.innerText=tracks[id].songName;
-        artistName.innerText=tracks[id].artistName;
-    
-        //when directly click on next with click on play btn
-        //user click after pause music,checks
-         if(play.classList[1]==='fa-play-circle-o'){
-            play.classList.remove('fa-play-circle-o');
-            play.classList.add('fa-pause-circle-o');
-        }
-        audio.play();
-        
-    });
-}
-
-for (const favorite of favorites) {
-    favorite.addEventListener('click',function () {
-        const trackId =parseInt( favorite.getAttribute('data-trackId'));
-       
-        favorite.classList.toggle('like');
-// console.log(typeof trackId);
-        tracks = tracks.map((track,index)=>{
-            if(trackId === index){
-                track.isFavorite = !track.isFavorite;
-            }
-            console.log(track);
-            return track;
-        });
-        console.log(tracks);
-
-        
-    });
-}
