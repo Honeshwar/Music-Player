@@ -197,7 +197,7 @@ let isDragging = false;
 progress.addEventListener("mousedown", startDragging);
 progress.addEventListener("mousemove", dragProgress);
 progress.addEventListener("mouseup", stopDragging);
-// progress.addEventListener("mouseout", stopDragging);
+progress.addEventListener("mouseout", stopDragging);
 
 //drag slide start
 function startDragging() {
