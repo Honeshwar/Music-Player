@@ -4,6 +4,10 @@ A simple and responsive web-based music player with a clean UI and smooth playba
 ## 🔗 Live Demo
 <a href="https://honeshwar.github.io/Music-Player/" target="_blank">https://honeshwar.github.io/Music-Player/</a>
 
+## ScreenShots
+![App Screenshot](https://honeshwar.github.io/Music-Player/assets/image/screenshot1.png)
+
+
 ## ✨ Features
 - ▶️ Play / Pause music
 - ⏭ Next & Previous track controls
