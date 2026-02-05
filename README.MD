@@ -1,15 +1,27 @@
-# Music Player Application
+# 🎵 Music Player Application
+A simple and responsive web-based music player with a clean UI and smooth playback experience.
 
-## HOSTED LINKS
+## 🔗 Live Demo
+<a href="https://honeshwar.github.io/Music-Player/" target="_blank">https://honeshwar.github.io/Music-Player/</a>
 
-- HOSTED ON GITHUB PAGES
+## ✨ Features
+- ▶️ Play / Pause music
+- ⏭ Next & Previous track controls
+- 🔀 Shuffle play mode
+- ⏹ Stop music playback
+- 🔊 Volume up & down control
+- 🎚 Seek / scroll to control track progress
+- ❤️ Save songs to Favorites
+- 📱 Fully responsive design
 
-  LINK - https://honeshwar.github.io/Music-Player/
+## 🛠 Tech Stack
+- **HTML** – Structure and layout  
+- **CSS** – Styling and responsiveness  
+- **JavaScript** – Audio controls and interactivity  
 
-- HOSTED ON NETLIFY
-
-  LINK - https://symphonious-dragon-a7431c.netlify.app/
-
-## ScreenShots
-
-![App Screenshot](https://honeshwar.github.io/Music-Player/assets/image/screenshot1.png)
+## ⚙️ Installation & Setup
+1. Clone the repository
+   ```bash
+   git clone https://github.com/Honeshwar/Music-Player.git
+   cd Music-Player
+   open index.html file in your browser
